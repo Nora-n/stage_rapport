@@ -28,13 +28,16 @@ paramètres cosmologiques}\\
 \hrule\vfill
 
 \parbox{15cm}{\small\textbf{Résumé}:
-In order to achieve a 1\% determination of the Dark Energy state parameter w,
-both statistic and systematic uncertainties need to be dealt with. If getting
-more data can reduce the statistic ones, only the study of the physical behavior
-of our astral objects of study, namely the supernovae of type Ia (SNe Ia for
-short) can impact the systematic ones. In this report, we'll discuss how
-establishing the evolution of SNe Ia's stretch parameter as a function of the
-redshift can be of use for this goal.}\vspace{0.5cm}
+L'étude des supernovae de type Ia a de nombreuses utilités en physique. Elle
+sert notamment à la détermination de paramètres cosmologiques, comme la
+constante de Hubble ou le paramètre d'état de l'énergie noire. Afin d'améliorer
+la précision et la justesse des mesures existantes, les incertitudes
+statistiques et systématiques doivent être traitées correctement. Si l'ajout de
+données permet de réduire les incertitudes statistiques, il n'y a que l'étude du
+comportement physique des supernovae qui permet de réduire les incertitudes
+systématiques. Dans ce rapport, nous discutons comment l'établissement de lois
+d'évolution du paramètre de durée d'explosion d'une supernova en fonction du
+redshift permettrait d'atteindre ce but.}\vspace{0.5cm}
 
 \parbox{15cm}{\small\textbf{Mots-clés}:
 Cosmologie, supernovae}\vspace{0.5cm}
@@ -84,14 +87,71 @@ sa proportion dans l'Univers et les lois physiques auxquelles elle obéit.
 \end{itemize}
 
 \subsection{Diagramme de Hubble}
+Cette découverte a été effectuée par l'utilisation des mesures des flux lumineux
+de supernovae, exprimés en magnitude qui en est le logarithme. Le flux est relié
+à la luminosité $L$ d'une source lumineuse et à la distance $d_L$ entre la source
+et le point d'observation par la relation
+
+\begin{equation}
+    F = \frac{L}{4\pi d_L²}
+\end{equation}
+
+et la magnitude apparente $m$ est reliée au flux reçu par la relation
+
+\begin{equation}
+    m - m_0 = -2.5\log\LR{F}{F_0} = -2.5\log\LR{L}{4\pi d_L²} + C
+\end{equation}
+
+avec $F_0$ le flux d'une étoile de référence. Cette définition de la magnitude
+dépend donc de la distance ; on définit alors une magnitude \textit{absolue}
+traduisant la luminosité intrinsèque du corps observé : c'est la magnitude
+apparente que percevrait un observateur situé à une distance de $\SI{10}{pc}$ de
+la source, autrement dit
+
+\begin{equation}
+    M = -2.5\log\LR{L}{4\pi\LF{\SI{10}{pc}}²} + C
+\end{equation}
+
+On peut alors définir le \textit{module de distance} $\m$ défini par
+
+\begin{equation}
+    \m \equiv m - M = 5\log(d_L) - 5
+\end{equation}
+
+avec $d_L$ en parsec. Or, en considérant un univers plat homogène et isotrope,
+l'équation de \bsc{Friedmann}-\bsc{Lemaître} mène à une expression de $d_L$
+dépendant des paramètres cosmologiques d'après la relation
+
+\begin{equation}
+    d_L = \LF{1 + z} \times c \LF{ \int_0^z \d z' \left[ \O_R
+    \LF{1 + z'}⁴ + \O_M \LF{1 + z'}³ + \O_{\L} \right]^{-1/2}}
+\end{equation}
+
+\textcolor{orange}{Rajouter développement en annexe ?}
+
+et le module de distance $\m$ permet de de déterminer $d_L$ \textit{via} la
+mesure de la magnitude apparente $m$, si la magnitude absolue $M$ est connue.
+Les SNe Ia sont utilisées pour leur magnitude absolue \textit{a priori}
+standard, ce qui leur a valu le nom de \textit{chandelles standards}.
+
+En réalité, il existe une dispersion naturelle d'environ 40\% des magnitudes
+absolues des SNe Ia. Cette dispersion implique une imprécision sur la valeur de
+la distance déduite par la mesure de magnitude apparente de 20\%, comme le
+montre la figure ci-après :
+
+\begin{figure}[htbp!]
+    \centering
+    \includegraphics[width = .5\linewidth]{Rapport_figures/disp_40.png}
+    \caption{Effet de la dispersion naturelle de la magnitude absolue des SNe Ia
+    sur la mesure du module de distance par rapport à l'évolution attendue (en
+    noir).}
+    \label{disp_40}
+\end{figure}
+
 \begin{itemize}
     \item Mesure de magnitude, équations ;
     \item Dispersion naturelle, imprécision.
 \end{itemize}
-L'utilisation des SNe Ia se fait par la mesure de leur distance de luminosité.
-La grandeur que les instrument mesure est en fait le flux de l'astre:
-\[ F = \frac{L}{4\pi d²}\]
-avec $L$ sa luminosité et $d$ la distance entre l'astre et le capteur.
 
 \subsection{Les SNe Ia}
 \begin{itemize}
