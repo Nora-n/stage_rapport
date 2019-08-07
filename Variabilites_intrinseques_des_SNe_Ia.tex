@@ -122,14 +122,24 @@ avec $d_L$ en parsec. Or, en considérant un univers plat homogène et isotrope,
 l'équation de \bsc{Friedmann}-\bsc{Lemaître} mène à une expression de $d_L$
 dépendant des paramètres cosmologiques d'après la relation
 
-\begin{equation}
+\begin{equation}\label{dL}
     d_L = \LF{1 + z} \times c \LF{ \int_0^z \d z' \left[ \O_R
     \LF{1 + z'}⁴ + \O_M \LF{1 + z'}³ + \O_{\L} \right]^{-1/2}}
 \end{equation}
 
+avec $\O_R$ la densité d'énergie de rayonnement, $\O_M$ la densité d'énergie de
+matière, et $\O_\L$ la densité d'énergie noire. Elles sont reliées par la
+relation
+
+\begin{equation}
+    1 = \O_R + \O_M + \O_\L
+\end{equation}
+
+pour un univers plat.
+
 \textcolor{orange}{Rajouter développement en annexe ?}
 
-et le module de distance $\m$ permet de de déterminer $d_L$ \textit{via} la
+Ainsi, le module de distance $\m$ permet de de déterminer $d_L$ \textit{via} la
 mesure de la magnitude apparente $m$, si la magnitude absolue $M$ est connue.
 Les SNe Ia sont utilisées pour leur magnitude absolue \textit{a priori}
 standard, ce qui leur a valu le nom de \textit{chandelles standards}.
@@ -142,9 +152,10 @@ montre la figure ci-après :
 \begin{figure}[htbp!]
     \centering
     \includegraphics[width = .5\linewidth]{Rapport_figures/disp_40.png}
-    \caption{Effet de la dispersion naturelle de la magnitude absolue des SNe Ia
-    sur la mesure du module de distance par rapport à l'évolution attendue (en
-    noir).}
+    \caption{Effet de la dispersion naturelle de la magnitude absolue
+    des SNe Ia sur la mesure du module de distance par rapport à l'évolution
+attendue (en noir).}
+    \captionsetup{justification=centering}
     \label{disp_40}
 \end{figure}
 
@@ -154,12 +165,106 @@ montre la figure ci-après :
 \end{itemize}
 
 \subsection{Les SNe Ia}
+
+Si les SNe Ia sont considérées comme des chandelles standards, c'est parce
+qu'elles obéissent au même mécanisme d'explosion. Bien qu'il soit encore mal
+compris, on sait qu'il résulte de l'augmentation de la masse de naines
+blanches, des étoiles inertes très denses, qui mènerait à une explosion
+thermonucléaire lorsqu'elles atteignent la masse critique de \bsc{Chandrasekhar}
+de \SI{1.4}{M_\odot}. Cette augmentation peut suivre de l'accrétion d'un
+compagnon qui est généralement une géante rouge, ou par fusion de deux naines
+blanches.
+
+Elles sont beaucoup étudiées en cosmologie de fait de leur forte luminosité
+permettant une mesure de magnitude jusqu'à des redshifts de l'ordre de $z
+\approx 1$, ce qui équivaut à une analyse des propriétés cosmologiques de
+l'Univers quand il était de la moitié de son âge actuel. Elles sont notamment
+les meilleures candidates pour les études à bas redshift, leur luminosité (sur
+une courte période) pouvant dépasser celle de leur galaxie hôte contenant des
+centaines de milliards d'étoiles,  et qui, d'après l'équation \ref{dL}, est la
+zone d'Univers où le paramètre d'énergie noire domine (pour $z \leq 1$, c'est le
+terme en $\O_\L$ qui domine étant donné la puissance $-1/2$ sur le crochet). Un
+des buts de l'utilisation des SNe Ia en cosmologie est de mieux comprendre le
+comportement de cette énergie noire, sa densité précise et l'évolution de sa
+densité.
+
 \begin{itemize}
     \item Spécificité astrophysique ;
     \item Pertinence cosmologique.
 \end{itemize}
 
 \subsection{Courbes de lumière}
+Pour réaliser les mesures de magnitudes, une seule acquisition n'est pas
+suffisante. On s'intéresse à l'évolution de la luminosité d'une supernova à
+partir du moment de son explosion. Cette analyse permet de définir plusieurs
+paramètres (cf. figure \ref{lightcurves}) \textcolor{orange}{Rajouter
+références !}
+
+\begin{enumerate}
+    \item Le paramètre de \textit{color}, défini par la différence de magnitude
+        au maximum d'émission entre les bandes vertes et bleues ;
+    \item Le paramètre de \textit{stretch}, définissant la durée de l'explosion
+        de la supernova ; il s'apparente à la largeur à mi-hauteur d'un
+        gaussienne mais pour une distribution non symétrique.
+\end{enumerate}
+
+\begin{figure}[htbp!]
+    \centering
+    \includegraphics[width=.5\linewidth]{Rapport_figures/Lightcurves.png}
+    \caption{Exemple de courbe de lumière d'une supernova depuis son explosion
+    pour différentes longueurs d'ondes. On peut y définir un paramètre de
+couleur et un paramètre de \textit{stretch} qui estime la durée d'explosion de
+ladite SNe Ia.}
+    \captionsetup{justification=centering}
+    \label{lightcurves}
+\end{figure}
+
+La définition de ces paramètres n'est pas anodine : il a en effet été montré
+qu'une corrélation forte existe entre la valeur de ces paramètres et la
+magnitude absolue $M_B{}^{\text{max}}$ d'une supernova. Notamment, les SNe Ia
+avec une grande durée d'explosion (grand stretch) on une luminosité intrinsèque
+plus grande (relation appelée "brighter-slower"), et que les SNe Ia les plus
+bleues sont également plus lumineuses (relation "brighter-bluer"). On peut voir
+ces corrélations figure \ref{brighter_slower_bluer}.
+
+\begin{figure}[htbp!]
+    \centering
+    \includegraphics[width=.7\linewidth]{Rapport_figures/disp_x1_c.PNG}
+    \caption{Corrélations entre la différence de luminosité maximale d'une
+    supernova dans le bleu et les paramètres de stretch (« $x_1$ ») et de
+couleur (« color ») d'après l'algorithme SALT2.}
+    \captionsetup{justification=centering}
+    \label{brighter_slower_bluer}
+\end{figure}
+
+On peut alors inclure ces relations linéaires dans l'expression de la magnitude
+absolue, \textit{via} la relation
+
+\begin{equation}
+    \D M_B{}^{\text{corr}} \equiv \LF{M_B{}^{\text{max}} - M_B{}^0} + \LF{\a x_1
+    - \b c}
+\end{equation}
+
+où $\a$ est le coefficient du stretch, et $\b$ celui de la couleur, tous les
+deux positifs, avec $M_B{}^0$ la magnitude moyenne des SNe Ia. Tous ces
+paramètres sont ajustés simultaniément sur l'ensemble des données disponibles.
+Ces relations supplémentaires permettent de réduire l'incertitude sur le
+paramètre de magnitude absolue, et d'avoir une détermination de la distance dont
+l'erreur est diminuée à 8\% (cf figure \ref{disp_20}
+
+\begin{figure}[htbp!]
+    \centering
+    \includegraphics[width=.5\linewidth]{Rapport_figures/disp_reduite.png}
+    \captionsetup{justification=centering}
+    \caption{Diagramme de Hubble avec, en haut, la magnitude apparente avant et
+        après le processus de standardisation, qui consiste à inclure les
+        corrélations entre la magnitude absolue et les paramètres de stretch et
+        de couleur, respectivement en blanc et en bleu. En bas, on a le
+        \textit{résidu} ne montrant que la dispersion autour de la courbe noire,
+        réprésentant l'évolution de la luminosité prédite par la loi de Hubble.}
+    \label{disp_20}
+\end{figure}
+
 \begin{itemize}
     \item Définitions ;
     \item Relations empiriques, équation corrigée.
