@@ -146,18 +146,20 @@ standard, ce qui leur a valu le nom de \textit{chandelles standards}.
 
 En réalité, il existe une dispersion naturelle d'environ 40\% des magnitudes
 absolues des SNe Ia. Cette dispersion implique une imprécision sur la valeur de
-la distance déduite par la mesure de magnitude apparente de 20\%, comme le
-montre la figure ci-après :
+la distance déduite par la mesure de magnitude apparente de 20\%.
 
-\begin{figure}[htbp!]
-    \centering
-    \includegraphics[width = .5\linewidth]{Rapport_figures/disp_40.png}
-    \caption{Effet de la dispersion naturelle de la magnitude absolue
-    des SNe Ia sur la mesure du module de distance par rapport à l'évolution
-attendue (en noir).}
-    \captionsetup{justification=centering}
-    \label{disp_40}
-\end{figure}
+%, comme le
+%montre la figure ci-après :
+%
+%\begin{figure}[htbp!]
+%    \centering
+%    \includegraphics[width = .5\linewidth]{Rapport_figures/disp_40.png}
+%    \captionsetup{justification=centering}
+%    \caption{Effet de la dispersion naturelle de la magnitude absolue
+%    des SNe Ia sur la mesure du module de distance par rapport à l'évolution
+%attendue (en noir).}
+%    \label{disp_40}
+%\end{figure}
 
 \begin{itemize}
     \item Mesure de magnitude, équations ;
@@ -210,12 +212,12 @@ références !}
 
 \begin{figure}[htbp!]
     \centering
-    \includegraphics[width=.5\linewidth]{Rapport_figures/Lightcurves.png}
+    \includegraphics[width=.5\linewidth]{Rapport_figures/lightcurve.png}
+    \captionsetup{justification=centering}
     \caption{Exemple de courbe de lumière d'une supernova depuis son explosion
     pour différentes longueurs d'ondes. On peut y définir un paramètre de
 couleur et un paramètre de \textit{stretch} qui estime la durée d'explosion de
 ladite SNe Ia.}
-    \captionsetup{justification=centering}
     \label{lightcurves}
 \end{figure}
 
@@ -230,10 +232,10 @@ ces corrélations figure \ref{brighter_slower_bluer}.
 \begin{figure}[htbp!]
     \centering
     \includegraphics[width=.7\linewidth]{Rapport_figures/disp_x1_c.PNG}
+    \captionsetup{justification=centering}
     \caption{Corrélations entre la différence de luminosité maximale d'une
     supernova dans le bleu et les paramètres de stretch (« $x_1$ ») et de
 couleur (« color ») d'après l'algorithme SALT2.}
-    \captionsetup{justification=centering}
     \label{brighter_slower_bluer}
 \end{figure}
 
@@ -250,19 +252,41 @@ deux positifs, avec $M_B{}^0$ la magnitude moyenne des SNe Ia. Tous ces
 paramètres sont ajustés simultaniément sur l'ensemble des données disponibles.
 Ces relations supplémentaires permettent de réduire l'incertitude sur le
 paramètre de magnitude absolue, et d'avoir une détermination de la distance dont
-l'erreur est diminuée à 8\% (cf figure \ref{disp_20}
+l'erreur est diminuée à 8\% (cf figure \ref{disp_20}) \textit{via} la relation
+
+\begin{equation}
+    \m = m - M +\a x_1 - \b c
+\end{equation}
 
 \begin{figure}[htbp!]
     \centering
-    \includegraphics[width=.5\linewidth]{Rapport_figures/disp_reduite.png}
+    \includegraphics[width=.5\linewidth]{Rapport_figures/disp_beau.png}
     \captionsetup{justification=centering}
     \caption{Diagramme de Hubble avec, en haut, la magnitude apparente avant et
         après le processus de standardisation, qui consiste à inclure les
         corrélations entre la magnitude absolue et les paramètres de stretch et
         de couleur, respectivement en blanc et en bleu. En bas, on a le
         \textit{résidu} ne montrant que la dispersion autour de la courbe noire,
-        réprésentant l'évolution de la luminosité prédite par la loi de Hubble.}
+        indiquant l'évolution de la luminosité prédite par la loi de Hubble.}
     \label{disp_20}
+\end{figure}
+
+L'utilisation de cette relation a alors permis d'améliorer la précision des
+mesures de distance, et ainsi discriminer différentes valeurs possibles pour les
+paramètres cosmologiques : cela a mené à la découverte de l'expansion accélérée
+de l'Univers \textit{via} une valeur non-nulle de $\O_\L$ pour laquelle un prix
+Nobel a été descerné. Avant cette étude, l'évolution attendue du module de
+distance des SNe Ia était indiqué par la courbe grise dans la figure
+\ref{hub_acc_exp}.
+
+\begin{figure}[htbp!]
+    \centering
+    \includegraphics[width=.5\linewidth]{Rapport_figures/bet_al_2.PNG}
+    \captionsetup{justification=centering}
+    \caption{Diagramme de Hubble actuel (en couleurs, une par échantillon
+             d'observation) comparé au diagramme de Hubble avant la découverte 
+             de l'expansion accélérée de l'Univers.}
+    \label{hub_acc_exp}
 \end{figure}
 
 \begin{itemize}
@@ -271,6 +295,55 @@ l'erreur est diminuée à 8\% (cf figure \ref{disp_20}
 \end{itemize}
 
 \subsection{Incertitudes systématiques}
+
+Cette avancée monumentale dans la cosmologie a pu montrer la puissance des SNe
+Ia dans la détermination de paramètres cosmologiques. Depuis cette découverte,
+qui ne se basait que sur une centaine de données de SNe Ia, plus de données ont
+été accumulées, et la précision sur les mesures de $\O_M$ et $\O_\L$ s'est
+améliorée. Cependant, sur la totalité de l'incertitude sur ces paramètres, la
+part des incertitudes systématiques est très importante. C'est non seulement une
+limitation à la précision des mesures, mais également un danger pour la justesse
+de celles-ci. Par exemple, dans le but d’étudier l’énergie noire, et notamment
+son paramètre d’état $\w$ qui devrait être de $-1$ pour correspondre à un fluide
+de pression négative et sa dérivée $\w_a$ qui traduit l’évolution de ce
+comportement au cours du temps, il convient de tester leur concordance avec
+différents modèles cosmologiques. Il a été montré que si les erreurs
+systématiques ne sont pas prises en compte et qu'on les considère comme
+négligeable devant les incertitudes statistiques, l'ajout de nouvelles données
+(qui est le but de la collaboration LSST qui amènera environ 100 000 données de
+SNe Ia à commencer dans 3 ans) nous mènerait forcément à un résultat éloigné du
+modèle que l'on souhaite tester (cf. figure \ref{err_syst}).
+
+\begin{figure}[htbp!]
+    \centering
+    \includegraphics[width=.5\linewidth]{Rapport_figures/scolnic_syst.png}
+    \captionsetup{justification=centering}
+    \caption{\textit{Contour plot} indiquant la précision à 68 et 90\% de la
+    mesure des paramètres $\O_M$ et $\O_\L$ pour la découverte historique de
+    \bsc{Riess et. al} (R98, en blanc) se basant sur 100 données de SNe Ia, et
+    pour les échantillons actuels utilisant environ 1000 SNe Ia (en rouge). En
+    gris est indiqué la part des incertitudes systématiques à l'incertitude
+    totale. \cite{scolnic_complete_2018}}
+    \label{scolnic_syst}
+\end{figure}
+
+\begin{figure}[htbp!]
+    \centering
+    \includegraphics[width=.5\linewidth]{Rapport_figures/error.PNG}
+    \captionsetup{justification=centering}
+    \caption{Erreur attendue sur la mesure de $\w$ et $\w_a$ en ne considérant
+    que la réduction des erreurs statistiques sans prendre en compte les erreurs
+    systématiques.}
+    \label{err_syst}
+\end{figure}
+
+Ainsi, si l'ajout de données permet de réduire
+les incertitudes statistiques, il paraît nécessaire de travailler sur la
+physique à l'origine de ces variations de magnitudes absolues pour pouvoir, dans
+l'idéal, réaliser le même travail qui a été fait avec le stretch et la couleur
+mais pour d'autres paramètres. C'est l'objet de ce stage et de la thèse qui en
+découle.
+
 \begin{itemize}
     \item Importance dans les mesures actuelles ;
     \item Importance dans les mesures futures.
