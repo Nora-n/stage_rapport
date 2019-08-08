@@ -67,8 +67,7 @@ Je tiens à remercier toutes les personnes qui ont contribué, de près ou de lo
 \newpage
 
 \section{Introduction}\label{sec:int}
-\subsection{Le domaine de recherche}
-
+\subsection{Le domaine de recherche}\label{ssec:dom}
 La combinaison des observations et des prédictions théoriques du modèle du Big
 Band indiquent que l'univers est en expansion. Lors de la découverte de cette
 expansion, on pensait qu'elle devrait ralentir sous l'effet de la gravitation.
@@ -86,7 +85,7 @@ sa proportion dans l'Univers et les lois physiques auxquelles elle obéit.
     \item Tension sur $H_0$? \bsc{Riess et al.} 2016 donne des valeurs en intro
 \end{itemize}
 
-\subsection{Diagramme de Hubble}
+\subsection{Diagramme de Hubble}\label{ssec:hub}
 Cette découverte a été effectuée par l'utilisation des mesures des flux lumineux
 de supernovae, exprimés en magnitude qui en est le logarithme. Le flux est relié
 à la luminosité $L$ d'une source lumineuse et à la distance $d_L$ entre la source
@@ -166,7 +165,7 @@ la distance déduite par la mesure de magnitude apparente de 20\%.
     \item Dispersion naturelle, imprécision.
 \end{itemize}
 
-\subsection{Les SNe Ia}
+\subsection{Les SNe Ia}\label{ssc:sneia}
 
 Si les SNe Ia sont considérées comme des chandelles standards, c'est parce
 qu'elles obéissent au même mécanisme d'explosion. Bien qu'il soit encore mal
@@ -195,7 +194,7 @@ densité.
     \item Pertinence cosmologique.
 \end{itemize}
 
-\subsection{Courbes de lumière}
+\subsection{Courbes de lumière}\label{ssec:lc}
 Pour réaliser les mesures de magnitudes, une seule acquisition n'est pas
 suffisante. On s'intéresse à l'évolution de la luminosité d'une supernova à
 partir du moment de son explosion. Cette analyse permet de définir plusieurs
@@ -285,7 +284,9 @@ distance des SNe Ia était indiqué par la courbe grise dans la figure
     \captionsetup{justification=centering}
     \caption{Diagramme de Hubble actuel (en couleurs, une par échantillon
              d'observation) comparé au diagramme de Hubble avant la découverte 
-             de l'expansion accélérée de l'Univers.}
+             de l'expansion accélérée de l'Univers (en gris) en haut, et
+             diagramme résiduel où l'on a retiré l'évolution théorique du module
+             de distance.}
     \label{hub_acc_exp}
 \end{figure}
 
@@ -294,8 +295,7 @@ distance des SNe Ia était indiqué par la courbe grise dans la figure
     \item Relations empiriques, équation corrigée.
 \end{itemize}
 
-\subsection{Incertitudes systématiques}
-
+\subsection{Incertitudes systématiques}\label{ssc:syst}
 Cette avancée monumentale dans la cosmologie a pu montrer la puissance des SNe
 Ia dans la détermination de paramètres cosmologiques. Depuis cette découverte,
 qui ne se basait que sur une centaine de données de SNe Ia, plus de données ont
@@ -349,24 +349,79 @@ découle.
     \item Importance dans les mesures futures.
 \end{itemize}
 
-\subsection{Problème du progéniteur}
+\subsection{Problème du progéniteur}\label{ssec:prog}
+Un des problèmes majeurs à la réalisation de ce but est que l'on n'a jamais
+accès aux supernovae avant qu'elles explosent, sous leur forme de
+\textit{progéniteur}, étant donné que les courbes de lumière sont acquises à
+partir du moment de l'explosion. Il est donc impossible d'étudier directement
+les propriétés des progéniteurs (âge, métallicité...). Pourtant, la physique de
+l'explosion à l'origine des SNe Ia dépend de ces propriétés, et on sait que les
+propriétés des \textit{étoiles} d'une manière générale évoluent en fonction du
+temps ; par exemple, à un redshift de $z \approx 1$, il y avait 40 fois plus de
+formation stellaire, et donc de formation de jeunes étoiles. En supposant que
+les propriétés des progéniteurs évoluent également avec le temps, et donc avec
+$z$, on s'attend à avoir une variation de la magnitude absolue avec le redshift,
+ce qui fausserait les mesures du diagramme de Hubble.
+
 \begin{itemize}
     \item Progéniteur inconnus :
     \item L moyennes différentes avec $z$ ou échantillon ;
     \item Évolution du \textit{lsSFR}.
 \end{itemize}
 
-Parler du fait que le code est sur GitHub, et faire des références dans la
-suite.
+Dans la suite de ce rapport, et pour éviter la surcharge de lignes de code, le-a
+lecteur-ice pourra se référer aux ressources mises en ligne publiquement sur
+\href{https://github.com/Nora-n/variaIa/tree/master/variaIa}{GitHub}
+(https://github.com/Nora-n/variaIa/tree/master/variaIa).
 
-\section{Construction d'un échantillon complet}
-\subsection{Effets de sélection}
+\section{Construction d'un échantillon complet}\label{sec:complet}
+\subsection{Effets de sélection}\label{ssec:selec}
+La première étape à l'établissement de lois physiques tentant de relier les
+variations de magnitudes absolues avec des paramètres mesurable consiste à
+travailler sur des données sans effet de sélection qui biaiserait
+potentiellement les données recueillies. Or, l'observation du nombre de SNe Ia
+analysée en fonction du redshift nous montre l'existence d'un effet de sélection
+: en supposant une répartition homogène et isotrope des supernovae dans
+l'espace, on s'attend à avoir un nombre de SNe Ia à une certaine distance comme
+étant proportionnel au volume de l'espace entre l'observateur et cette distance.
+En terme de redshift, on s'attend à la relation $\#\text{SNe Ia} \propto z³$. Si
+cette relation est vérifiée jusqu'à une certaine distance, la figure
+\ref{redshift_miss} nous montre qu'à partir d'un moment, il n'y a plus de
+nouvelles supernovae observées.
+
+\begin{figure}[htbp!]
+    \centering
+    \includegraphics[width=.5\linewidth]{Rapport_figures/redshift_miss.png}
+    \captionsetup{justification=centering}
+    \caption{Histogramme du nombre de SNe Ia observées en fonction du redshift
+    pour les données de l'échantillon SNLS (SuperNova Legacy Survey).}
+    \label{redshift_miss}
+\end{figure}
+
+Cette évolution est due au fait que notre moyen d'observation des supernovae est
+la mesure de flux, comme discuté dans l'introduction (partie \ref{ssec:hub}).
+Ainsi, la luminosité totale de la supernova est divisée sur sa surface de
+rayonnement, proportionnelle au carré de la distance, et il arrive une distance
+où les SNe Ia de luminosités intrinsèques les plus faibles vont être les
+premières à ne pas pouvoir être captée par les éléments CCD des instruments de
+mesure. Or, comme discuté dans la partie \ref{ssec:lc}, les supernovae de
+grandes durées d'explosion sont également plus lumineuses (relation
+"brighter_slower"), ce qui veut dire que les supernovae les moins lumineuses
+sont également celles de petite durée d'explosion (petit stretch). Le fait de
+louper des supernovae à cause d'une luminosité intrinsèque trop faible par
+rapport à leur distance à nous n'est donc pas anodin, et il faut s'en prévenir.
+
 \begin{itemize}
     \item Histogramme échantillons ;
     \item Rappel relation \textcolor{red}{brighter-slower} et conclusion.
 \end{itemize}
 
-\subsection{Méthode de détermination}
+\subsection{Méthode de détermination}\label{ssec:det}
+Pour trouver cette distance à partir de laquelle on commence à sélectionner les
+supernovae analysées, en l'absence de données précises sur les capacités des
+capteurs CCD de chaque échantillon à capter un flux lumineux, l'approche qui a
+été choisie repose sur la comparaison entre l'évolution attendue et l'évolution
+observée.
 \begin{itemize}
     \item Modèle d'évolution ;
     \item Statistique poissonienne, itérations pour chaque échantillon.
@@ -394,7 +449,8 @@ suite.
 \section{Conclusion}
 Conclusion
 
-\bibliographystyle{unsrt}
+%\bibliographystyle{aa}
+\bibliographystyle{siam}
 \bibliography{VIDSTIA}
 \addcontentsline{toc}{section}{Bibliographie}
 
