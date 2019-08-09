@@ -1,6 +1,7 @@
 \documentclass[a4paper, 12pt, svgnames]{article}
 
 \usepackage{preambule}
+\newcommand{\mr}[1]{{\textcolor[rgb]{0.80,0.10,0.1}{#1}}}
 
 \title{Variabilités intrinsèques des SNe Ia et leurs conséquences sur les
 paramètres cosmologiques}
@@ -67,85 +68,123 @@ Je tiens à remercier toutes les personnes qui ont contribué, de près ou de lo
 \newpage
 
 \section{Introduction}\label{sec:int}
-\subsection{Le domaine de recherche}\label{ssec:dom}
-La combinaison des observations et des prédictions théoriques du modèle du Big
-Band indiquent que l'univers est en expansion. Lors de la découverte de cette
-expansion, on pensait qu'elle devrait ralentir sous l'effet de la gravitation.
-Cependant, l'utilisation des supernovae de type Ia (SNe Ia) par \bsc{Perlmutter
-et al.}~\cite{perlmutter_measurements_1999}, \bsc{Riess et al.}
-~\cite{riess_observational_1998} et \bsc{Schmidt et al.}
-~\cite{schmidt_high-z_1998} a permis de mettre en évidence l'expansion
-accélérée de l'Univers, découverte pour laquelle ils ont eu le prix Nobel de
-physique de 2011. Il y aurait ainsi un phénomène allant à l'encontre des
-effets gravitationnels, phénomène qui a été nommé « énergie noire » : la
-cosmologie moderne vise entre aux à mieux comprendre la nature de cette énergie,
-sa proportion dans l'Univers et les lois physiques auxquelles elle obéit.
 
-\begin{itemize}
-    \item Tension sur $H_0$? \bsc{Riess et al.} 2016 donne des valeurs en intro
-\end{itemize}
+\mr{En cosmologie, l'étude des supernovae de type Ia (SNeIa) permet de mesurer
+l'histoire de l'expansion de l'univers et ainsi d'étudier la physique des
+éléments fondamentaux qui le composent, et notamment celle de l'énergie noire
+\cite{perlmutter_measurements_1999,riess_observational_1998}} \mr{Avec
+aujourd'hui $\approx1000$ SNeIa, les incertitudes systématiques commencent à
+dominer le budget d'erreur lors de la mesure des paramètres
+cosmologiques\cite{betoule2014, scolnic_complete2018}. Parmi celles-ci, l'un des
+effet dominant est lié à notre connaissance limitée de la physique même des
+SNeIa \cite{Sullivan2010,Rigault2013,Rigault2015}.} 
 
-\subsection{Diagramme de Hubble}\label{ssec:hub}
-Cette découverte a été effectuée par l'utilisation des mesures des flux lumineux
-de supernovae, exprimés en magnitude qui en est le logarithme. Le flux est relié
-à la luminosité $L$ d'une source lumineuse et à la distance $d_L$ entre la source
-et le point d'observation par la relation
+\mr{La cosmologie avec les SNeIa repose sur le fait qu'il est possible de
+prédire la luminosité des SNeIa à toutes distance de nous, et donc à tout moment
+dans le passé. Les SNeIa sont ainsi supposées être des chandelles standards (ou
+plutôt standardisables, nous le verrons) de la cosmologie. Cependant, la
+physique des étoiles change avec l'histoire de l'univers, alors serait-il
+possible que la physique des SNeIa change également? Si oui, est-ce que cela
+pourrait impacter la détermination des paramètres cosmologiques ? et de combien
+?} 
+
+Dans ce rapport, nous \mr{nous étudions un paramètre intrinsèque à la physique
+de l'explosion du progéniteur en SNeIa: l'étallement de la courbe de lumière,
+dit ”stretch” \mr{phillips199?}, et nous nous intéressons à son évolution
+potentielle en fonction de l'age de l'univers. Si nous trouvons qu'il évolue,
+alors nous aurons déterminer que la physique des SNeIa change en fonction du
+temps comme suggéré par
+\cite{Howell2009,Rigault2013,childress2014,Rigault2018}.}
+
+\mr{ICI PRESENTATION DU PLAN. Nous commencerons section~\ref{sec:cosmo} par
+présenter la cosmologie avec les SNeIa en revenant sur le concept de chandelles
+standard(isable)s et la détermination des paramètres cosmologiques.
+BLABLABLA...}
+
+%\subsection{Le domaine de recherche}\label{ssec:dom}
+%
+%La combinaison des observations et des prédictions théoriques du modèle du Big
+%Band indiquent que l'univers est en expansion. Lors de la découverte de cette
+%expansion, on pensait qu'elle devrait ralentir sous l'effet de la gravitation.
+%Cependant, l'utilisation des supernovae de type Ia (SNe Ia) par \bsc{Perlmutter
+%et al.}~\cite{perlmutter_measurements_1999}, \bsc{Riess et al.}
+%~\cite{riess_observational_1998} et \bsc{Schmidt et al.}
+%~\cite{schmidt_high-z_1998} a permis de mettre en évidence l'expansion
+%accélérée de l'Univers, découverte pour laquelle ils ont eu le prix Nobel de
+%physique de 2011. Il y aurait ainsi un phénomène allant à l'encontre des
+%effets gravitationnels, phénomène qui a été nommé « énergie noire » : la
+%cosmologie moderne vise entre aux à mieux comprendre la nature de cette énergie,
+%sa proportion dans l'Univers et les lois physiques auxquelles elle obéit.
+
+%\begin{itemize}
+%    \item Tension sur $H_0$? \bsc{Riess et al.} 2016 donne des valeurs en intro
+%\end{itemize}
+
+\section{Cosmologie avec les Supernovae de type Ia}
+\label{sec:cosmo}
+
+\subsection{Chandelles standards et diagramme de Hubble}\label{ssec:hub}
+
+\mr{En astronomie, la mesure d'un flux lumineux (F) est généralement exprimé en
+magnitude (m), tel que:}
 
 \begin{equation}
-    F = \frac{L}{4\pi d_L²}
+    m - m_0 = -2.5\log\LR{F}{F_0},
 \end{equation}
 
-et la magnitude apparente $m$ est reliée au flux reçu par la relation
+\mr{où $m_0$ ($F_0$) représente une magnitude (flux) de référence.}
+
+\mr{Le flux étant relié à la luminosité $L$ d'une source lumineuse à la distance
+$d_L$ par $F = L\times \left(4\pi d_L²\right)^{-1}$ alors:}
 
 \begin{equation}
-    m - m_0 = -2.5\log\LR{F}{F_0} = -2.5\log\LR{L}{4\pi d_L²} + C
+    m - m_0 = -2.5\log\LR{L}{4\pi d_L²} + C.
 \end{equation}
 
-avec $F_0$ le flux d'une étoile de référence. Cette définition de la magnitude
-dépend donc de la distance ; on définit alors une magnitude \textit{absolue}
-traduisant la luminosité intrinsèque du corps observé : c'est la magnitude
-apparente que percevrait un observateur situé à une distance de $\SI{10}{pc}$ de
-la source, autrement dit
+\mr{La magnitude $m$, dite "apparente", dépend donc de la distance. On définit
+la magnitude \textit{absolue} --~liée cette fois à la luminosité intrinsèque du
+corps observé~-- comme la magnitude apparente qu'aurait la source si elle était
+située à une distance de $\SI{10}{pc}$}:
 
 \begin{equation}
     M = -2.5\log\LR{L}{4\pi\LF{\SI{10}{pc}}²} + C
 \end{equation}
 
-On peut alors définir le \textit{module de distance} $\m$ défini par
+\mr{On peut alors définir le \textit{module de distance} $\m$ qui représente la
+distance de la source par:}
 
 \begin{equation}
     \m \equiv m - M = 5\log(d_L) - 5
 \end{equation}
+avec $d_L$ en parsec. 
 
-avec $d_L$ en parsec. Or, en considérant un univers plat homogène et isotrope,
+En considérant un univers plat homogène et isotrope,
 l'équation de \bsc{Friedmann}-\bsc{Lemaître} mène à une expression de $d_L$
 dépendant des paramètres cosmologiques d'après la relation
 
 \begin{equation}\label{dL}
     d_L = \LF{1 + z} \times c \LF{ \int_0^z \d z' \left[ \O_R
-    \LF{1 + z'}⁴ + \O_M \LF{1 + z'}³ + \O_{\L} \right]^{-1/2}}
+    \LF{1 + z'}⁴ + \O_M \LF{1 + z'}³ + \O_{\L} \right]^{-1/2}},
 \end{equation}
 
 avec $\O_R$ la densité d'énergie de rayonnement, $\O_M$ la densité d'énergie de
-matière, et $\O_\L$ la densité d'énergie noire. Elles sont reliées par la
-relation
+matière, et $\O_\L$ la densité d'énergie noire. Pour un univers plat elles sont
+reliées par la relation
 
 \begin{equation}
-    1 = \O_R + \O_M + \O_\L
+    1 = \O_R + \O_M + \O_\L.
 \end{equation}
 
-pour un univers plat.
-
-\textcolor{orange}{Rajouter développement en annexe ?}
+%\textcolor{orange}{Rajouter développement en annexe ?} \mr{Je ne pense pas. Si c'est ton cours de cosmo de M2, c'est inutile, mais ça peut etre une question lors de l'oral.}
 
 Ainsi, le module de distance $\m$ permet de de déterminer $d_L$ \textit{via} la
 mesure de la magnitude apparente $m$, si la magnitude absolue $M$ est connue.
-Les SNe Ia sont utilisées pour leur magnitude absolue \textit{a priori}
-standard, ce qui leur a valu le nom de \textit{chandelles standards}.
-
-En réalité, il existe une dispersion naturelle d'environ 40\% des magnitudes
-absolues des SNe Ia. Cette dispersion implique une imprécision sur la valeur de
-la distance déduite par la mesure de magnitude apparente de 20\%.
+\mr{On appelle "chandelle standard“ un objet dont $M$ est ainsi prédictible.
+Remarquez que pour des mesures de distances relatives, $M$ n'as pas besoin
+d'être connu absolument, mais simplement d'être le même entre les objets que
+nous comparons. Les SNeIa sont de telles objets et sont également extrêmement
+brillantes ce qui nous permet de faire des mesures de distances à l'échelle
+cosmologique (milliards d'années lumière).}
 
 %, comme le
 %montre la figure ci-après :
@@ -160,13 +199,12 @@ la distance déduite par la mesure de magnitude apparente de 20\%.
 %    \label{disp_40}
 %\end{figure}
 
-\begin{itemize}
-    \item Mesure de magnitude, équations ;
-    \item Dispersion naturelle, imprécision.
-\end{itemize}
+%\begin{itemize}
+%    \item Mesure de magnitude, équations ;
+%    \item Dispersion naturelle, imprécision.
+%\end{itemize}
 
-\subsection{Les SNe Ia}\label{ssc:sneia}
-
+\subsection{Les SNe Ia}\label{ssec:sneia}
 Si les SNe Ia sont considérées comme des chandelles standards, c'est parce
 qu'elles obéissent au même mécanisme d'explosion. Bien qu'il soit encore mal
 compris, on sait qu'il résulte de l'augmentation de la masse de naines
@@ -189,25 +227,59 @@ des buts de l'utilisation des SNe Ia en cosmologie est de mieux comprendre le
 comportement de cette énergie noire, sa densité précise et l'évolution de sa
 densité.
 
-\begin{itemize}
-    \item Spécificité astrophysique ;
-    \item Pertinence cosmologique.
-\end{itemize}
+\mr{\textit{Paragraphe bougé}} Mais en réalité, il existe une dispersion
+naturelle d'environ 40\% des magnitudes absolues des SNe Ia. Elles ne sont donc
+pas parfaitement standards et cette dispersion \mr{correspond une imprécision de
+$\approx$20\% sur la valeur de la distance déduite. Cependant, il existe des
+relations empiriques qui permettent de réduire cette dispersion d'un facteur
+trois, ce qui en en fait l'une des outils de mesure de distances le plus précis
+en astronomie.}
+
+%\begin{itemize}
+%    \item Spécificité astrophysique ;
+%    \item Pertinence cosmologique.
+%\end{itemize}
 
 \subsection{Courbes de lumière}\label{ssec:lc}
-Pour réaliser les mesures de magnitudes, une seule acquisition n'est pas
-suffisante. On s'intéresse à l'évolution de la luminosité d'une supernova à
-partir du moment de son explosion. Cette analyse permet de définir plusieurs
-paramètres (cf. figure \ref{lightcurves}) \textcolor{orange}{Rajouter
-références !}
+
+\mr{Les SNeIa sont des objets astronomiques dit transitoires: leur flux évolue
+en fonction du temps. La forme de cette évolution dépend de la physique
+intrinsèque à l'explosion du progéniteur --~les éléments radioactifs créés et
+détruits notamment. Les éléments extrinsèques, notamment les milieux
+interstellaires de la galaxie hôte et de notre propres galaxie, eux, peuvent
+affecter la luminosité relative être les gammes de longueurs d'onde observée
+--~les poussières interstellaires absorbent plus en bleu qu'en rouge, faisant
+paraître les objets plus rouges qu'ils ne le sont. On appelle courbe de lumière
+l'évolution de la luminosité d'un objet en fonction du temps. La
+figure~\ref{fig:lightcurves} montres les courbes de lumière d'une SNeIa
+(SN2011fe) dans cinqs bandes spectrales \cite{pereira2013}.}
+
+\begin{figure}[htbp!]
+    \centering
+    \includegraphics[width=.5\linewidth]{Rapport_figures/lightcurve.png}
+    \captionsetup{justification=centering}
+    \caption{Exemple de courbe de lumière d'une supernova depuis son explosion
+    pour différentes longueurs d'ondes. On peut y définir un paramètre de
+couleur et un paramètre de \textit{stretch} qui estime la durée d'explosion de
+ladite SNe Ia.}
+    \label{fig:lightcurves}
+\end{figure}
+
+\mr{Ainsi, la chandelle standard de la SNIa est en réalité définie comme sa
+luminosité dans la bande bleue ($\approx5000\AA$) à son maximum de luminosité}.
+
+\mr{Les courbes de lumières des SNeIa sont paramètrisées par trois éléments:}
 
 \begin{enumerate}
-    \item Le paramètre de \textit{color}, défini par la différence de magnitude
-        au maximum d'émission entre les bandes vertes et bleues ;
-    \item Le paramètre de \textit{stretch}, définissant la durée de l'explosion
-        de la supernova ; il s'apparente à la largeur à mi-hauteur d'un
-        gaussienne mais pour une distribution non symétrique.
+    \item \mr{Le maximum de luminosité dans la bande B, il s'agit du “$m$ des
+        SNeIa“.}
+    \item La couleur ("c"), défini par la différence de magnitude au maximum
+        d'émission entre les bandes vertes et bleues ;
+    \item Le \textit{stretch} ("$x_1$"), définissant l'élargissement de la
+        courbe de lumière.
 \end{enumerate}
+
+\mr{L'algorithme SALT2 \cite{guy2007,guy2010} permet d'ajuster ces paramètres.}
 
 \begin{figure}[htbp!]
     \centering
@@ -295,7 +367,7 @@ distance des SNe Ia était indiqué par la courbe grise dans la figure
     \item Relations empiriques, équation corrigée.
 \end{itemize}
 
-\subsection{Incertitudes systématiques}\label{ssc:syst}
+\subsection{Incertitudes systématiques}\label{ssec:syst}
 Cette avancée monumentale dans la cosmologie a pu montrer la puissance des SNe
 Ia dans la détermination de paramètres cosmologiques. Depuis cette découverte,
 qui ne se basait que sur une centaine de données de SNe Ia, plus de données ont
@@ -406,7 +478,7 @@ où les SNe Ia de luminosités intrinsèques les plus faibles vont être les
 premières à ne pas pouvoir être captée par les éléments CCD des instruments de
 mesure. Or, comme discuté dans la partie \ref{ssec:lc}, les supernovae de
 grandes durées d'explosion sont également plus lumineuses (relation
-"brighter_slower"), ce qui veut dire que les supernovae les moins lumineuses
+"brighter-slower"), ce qui veut dire que les supernovae les moins lumineuses
 sont également celles de petite durée d'explosion (petit stretch). Le fait de
 louper des supernovae à cause d'une luminosité intrinsèque trop faible par
 rapport à leur distance à nous n'est donc pas anodin, et il faut s'en prévenir.
@@ -421,20 +493,123 @@ Pour trouver cette distance à partir de laquelle on commence à sélectionner l
 supernovae analysées, en l'absence de données précises sur les capacités des
 capteurs CCD de chaque échantillon à capter un flux lumineux, l'approche qui a
 été choisie repose sur la comparaison entre l'évolution attendue et l'évolution
-observée.
+observée. Comme discuté précédemment, on s'attend à avoir un nombre de
+supernovae qui croît proportionnellement à $z³$. En utilisant l'histogramme
+précédent, on a, pour chaque intervalle, le nombre de supernovae observées. En
+définissant une fonction de paramètre $a$ comme $\#\text{SNe Ia} = a\times
+V(z)$, on peut trouver pour chaque milieu d'intervalle le nombre attendu de
+supernovae observées selon cette fonction. On peut alors utiliser une
+statistique poissonienne pour trouver la probabilité d'avoir ce nombre attendu
+sachant qu'on en a effectivement observé le nombre correspondant aux
+intervalles. En n'appliquant ce procédé qu'aux premiers intervalles, avant que
+le nombre de supernovae diminue par les effets de flux, la correspondance est
+bonne, et on peut optimiser le paramètre $a$ en maximisant la probabilité
+mentionnée ci-dessus. À partir d'un moment, la correspondance va devenir de
+moins en moins bonne et l'optimisation de ce paramètre sera mauvaise. La figure
+\ref{zmax_method} est un exemple de ce calcul.
+
+\begin{figure}[htbp!]
+    \centering
+    \subfigure[7 premiers]{\includegraphics[width=.4\linewidth]{Rapport_figures/zmax_method.png}}
+    \subfigure[9 premiers]{\includegraphics[width=.4\linewidth]{Rapport_figures/zmax_method_2.png}}
+    \captionsetup{justification=centering}
+    \caption{Graphique présentant l'évolution de la probabilité poissonienne
+        d'observer un nombre de supernovae correspondant à la fonction
+        $\#\text{SNe Ia} = a\times V(z)$ sachant que l'on en a observé le nombre
+        correspondant à l'intervalle. On a ici un exemple pour on n'a considéré
+        que les 9 premiers intervalles pour la minimisation, en extrapolant ce
+        que cette probabilité deviendrait en prenant plus d'intervalles (en
+        pointillés).}
+    \label{zmax_method}
+\end{figure}
+
+Pour déterminer plus précisément l'intervalle à partir duquel cette probabilité
+s'effondre, cette méthode est appliquée 100 fois, avec un histogramme divisé
+entre 5 et 13 intervalles de manière aléatoire, où pour chaque itération on
+choisit un intervalle maximal aléatoire parmi ces 5 ou 13-là, 4 fois de suite.
+Les courbes d'évolution de la probabilité poissonienne sont enregistrées, puis
+interpolées linéairement pour finalement en prendre la médiane et l'écart-type.
+Le résultat de ce procédé est montré figure \ref{zmax_result}.
+
+\begin{figure}[htbp!]
+    \centering
+    \includegraphics[width=.5\linewidth]{Rapport_figures/zmax_result.png}
+    \captionsetup{justification=centering}
+    \caption{Résultat du procédé de détermination du redshift maximal à partir
+    duquel les effets de sélections ne sont pas anodins.}
+    \label{zmax_result}
+\end{figure}
+
+On a ainsi déterminé les valeurs maximales de redshifts pour lesquelles ont n'a
+pas d'effet de sélection pour les différents échantillons dont on possède les
+données. Tous les raisonnements qui suivent s'appuient uniquement sur ces
+données dites « complètes », et ce procédé ne sera plus mentionné dans la suite.
+
 \begin{itemize}
     \item Modèle d'évolution ;
     \item Statistique poissonienne, itérations pour chaque échantillon.
 \end{itemize}
 
-\section{Modèle d'évolution}
-\subsection{Origine du modèle}
+\section{Modèle d'évolution}\label{sec:stretchevol}
+\subsection{Origine du modèle}\label{ssec:stretchevol_ori}
+
+Comme discuté partie \ref{ssec:prog}, le taux de formation stellaire, ci-après
+SFR pour \textit{Stellar Formation Rate}, évolue dans le temps. La collaboration
+SNF, pour \textit{SuperNova Factory}, a notamment effectué des mesures de
+stretch et de taux local spécifique de formation stellaire, LsSFR, c'est-à-dire
+le SFR normalisé par la masse stellaire de la galaxie hôte permettant de classer
+les galaxies par leur activité stellaire relatives (\textit{spécifique}, sSFR)
+dans une distance de $\SI{1}{kpc}$ autour de chaque supernova (\textit{local}).
+Il est alors possible de ranger les SNe Ia en deux catégories, celles issues de
+progéniteurs vieux au moment de l'explosion et celles issues de progéniteurs
+jeunes ; en effet le nombre de jeunes progéniteurs est supposé proportionnel au
+SFR qui représente l'activité de formation stellaire, alors que le nombre de
+vieux progéniteurs est proportionnel à la masse stellaire de la galaxie hôte
+(Mannucci et al. 2005, Scannapieco \& Bildsten 2005), et le rapport des deux
+donne, par définition, le sSFR. Le LsSFR est donc un traceur de ce rapport
+localement autour des supernovae. Le LsSFR définissant l'âge d'un progéniteur
+est choisi de telle sorte à ce qu'il y ait autant de supernovae de chaque sorte,
+pour ce redshift-là. Il apparaît alors une corrélation forte entre
+le stretch et le LsSFR, comme le montre la figure \ref{snf_data} : on voit qu'on
+ne peut pas avoir de supernova vieille avec un grand stretch, ou de supernova
+jeune avec un petit stretch.
+
+\begin{figure}[htbp!]
+    \centering
+    \subfigure[Données brutes]{\label{snf_data}
+        \includegraphics[width=.4\linewidth]{Rapport_figures/BiGaussian_onlydata.pdf}}
+    \subfigure[Premier modèle mis en place]{\label{3G2M2S}
+        \includegraphics[width=.4\linewidth]{Rapport_figures/BiGaussian.pdf}}
+    \captionsetup{justification=centering}
+    \caption{Stretch des supernovae étudiées par la collaboration SNF en
+    fonction de log(LsSFR). La couleur représente la probabilité pour une
+supernova d'être issue d'un jeune progéniteur.}
+\end{figure}
+
+On a ainsi essayé de déterminer une loi de distribution du stretch qui puisse
+être différente pour les supernovae issues de progéniteurs jeunes ou vieux. Le
+premier modèle implémenté est composé d'une distribution gaussienne de moyenne
+$\m_1$ et d'écart-type $\s_1$ pour les SNe Ia jeunes, et de la combinaison de
+deux distributions gaussiennes pour les SNe Ia vieilles, dont la première est de
+même moyenne et écart-type que la première (cf. figure \ref{3G2M2S}).
+
+%\begin{figure}[htbp!]
+%    \centering
+%    \includegraphics[width=.5\linewidth]{Rapport_figures/BiGaussian.pdf}
+%    \captionsetup{justification=centering}
+%    \caption{Premier modèle mis en place.}
+%    \label{3G2M2S}
+%\end{figure}
+
 \begin{itemize}
     \item Données \textcolor{orange}{SNF} ;
     \item Définition jeune/vieille d'après \bsc{Rigault et al.} 2018
 \end{itemize}
 
-\subsection{Implémentation aux échantillons}
+\subsection{Implémentation aux échantillons}\label{ssec:surveys}
+La détermination des données complètes discutée partie \ref{ssec:det} nous a
+permis de déterminer le stretch et le redshift moyens des 5 échantillons
+étudiés. 
 \begin{itemize}
     \item Concordance avec \textcolor{orange}{SNF} seulement
     \item Modèle \textcolor{orange}{SNF} sur toutes les données
