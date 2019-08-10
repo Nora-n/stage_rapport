@@ -69,24 +69,25 @@ Je tiens à remercier toutes les personnes qui ont contribué, de près ou de lo
 
 \section{Introduction}\label{sec:int}
 
-\mr{En cosmologie, l'étude des supernovae de type Ia (SNeIa) permet de mesurer
+En cosmologie, l'étude des supernovae de type Ia (SNeIa) permet de mesurer
 l'histoire de l'expansion de l'univers et ainsi d'étudier la physique des
 éléments fondamentaux qui le composent, et notamment celle de l'énergie noire
-\cite{perlmutter_measurements_1999,riess_observational_1998}} \mr{Avec
-aujourd'hui $\approx1000$ SNeIa, les incertitudes systématiques commencent à
-dominer le budget d'erreur lors de la mesure des paramètres
-cosmologiques\cite{betoule2014, scolnic_complete2018}. Parmi celles-ci, l'un des
-effet dominant est lié à notre connaissance limitée de la physique même des
-SNeIa \cite{Sullivan2010,Rigault2013,Rigault2015}.} 
+\cite{perlmutter_measurements_1999, riess_observational_1998}. Avec aujourd'hui
+$\approx1000$ SNeIa, les incertitudes systématiques commencent à dominer le
+budget d'erreur lors de la mesure des paramètres
+cosmologiques~\cite{betoule_improved_2014, scolnic_complete_2018}. Parmi
+celles-ci, l'un des effet dominant est lié à notre connaissance limitée de la
+physique même des SNeIa~\cite{sullivan_dependence_2010, rigault_evidence_2013,
+rigault_confirmation_2015}.
 
-\mr{La cosmologie avec les SNeIa repose sur le fait qu'il est possible de
+La cosmologie avec les SNeIa repose sur le fait qu'il est possible de
 prédire la luminosité des SNeIa à toutes distance de nous, et donc à tout moment
 dans le passé. Les SNeIa sont ainsi supposées être des chandelles standards (ou
 plutôt standardisables, nous le verrons) de la cosmologie. Cependant, la
 physique des étoiles change avec l'histoire de l'univers, alors serait-il
 possible que la physique des SNeIa change également? Si oui, est-ce que cela
 pourrait impacter la détermination des paramètres cosmologiques ? et de combien
-?} 
+? 
 
 Dans ce rapport, nous \mr{nous étudions un paramètre intrinsèque à la physique
 de l'explosion du progéniteur en SNeIa: l'étallement de la courbe de lumière,
@@ -94,73 +95,52 @@ dit ”stretch” \mr{phillips199?}, et nous nous intéressons à son évolution
 potentielle en fonction de l'age de l'univers. Si nous trouvons qu'il évolue,
 alors nous aurons déterminer que la physique des SNeIa change en fonction du
 temps comme suggéré par
-\cite{Howell2009,Rigault2013,childress2014,Rigault2018}.}
+\cite{howell_effect_2009, rigault_evidence_2013, childress_ages_2014,
+rigault_strong_2018}.}
 
 \mr{ICI PRESENTATION DU PLAN. Nous commencerons section~\ref{sec:cosmo} par
 présenter la cosmologie avec les SNeIa en revenant sur le concept de chandelles
 standard(isable)s et la détermination des paramètres cosmologiques.
 BLABLABLA...}
 
-%\subsection{Le domaine de recherche}\label{ssec:dom}
-%
-%La combinaison des observations et des prédictions théoriques du modèle du Big
-%Band indiquent que l'univers est en expansion. Lors de la découverte de cette
-%expansion, on pensait qu'elle devrait ralentir sous l'effet de la gravitation.
-%Cependant, l'utilisation des supernovae de type Ia (SNe Ia) par \bsc{Perlmutter
-%et al.}~\cite{perlmutter_measurements_1999}, \bsc{Riess et al.}
-%~\cite{riess_observational_1998} et \bsc{Schmidt et al.}
-%~\cite{schmidt_high-z_1998} a permis de mettre en évidence l'expansion
-%accélérée de l'Univers, découverte pour laquelle ils ont eu le prix Nobel de
-%physique de 2011. Il y aurait ainsi un phénomène allant à l'encontre des
-%effets gravitationnels, phénomène qui a été nommé « énergie noire » : la
-%cosmologie moderne vise entre aux à mieux comprendre la nature de cette énergie,
-%sa proportion dans l'Univers et les lois physiques auxquelles elle obéit.
-
-%\begin{itemize}
-%    \item Tension sur $H_0$? \bsc{Riess et al.} 2016 donne des valeurs en intro
-%\end{itemize}
-
-\section{Cosmologie avec les Supernovae de type Ia}
-\label{sec:cosmo}
-
+\section{Cosmologie avec les Supernovae de type Ia}\label{sec:cosmo}
 \subsection{Chandelles standards et diagramme de Hubble}\label{ssec:hub}
 
-\mr{En astronomie, la mesure d'un flux lumineux (F) est généralement exprimé en
-magnitude (m), tel que:}
+En astronomie, la mesure d'un flux lumineux (F) est généralement exprimé en
+magnitude (m), tel que :
 
 \begin{equation}
     m - m_0 = -2.5\log\LR{F}{F_0},
 \end{equation}
 
-\mr{où $m_0$ ($F_0$) représente une magnitude (flux) de référence.}
-
-\mr{Le flux étant relié à la luminosité $L$ d'une source lumineuse à la distance
-$d_L$ par $F = L\times \left(4\pi d_L²\right)^{-1}$ alors:}
+où $m_0$ ($F_0$) représente une magnitude (flux) de référence.
+Le flux étant relié à la luminosité $L$ d'une source lumineuse à la distance
+$d_L$ par $F = L\times \left(4\pi d_L²\right)^{-1}$ alors :
 
 \begin{equation}
     m - m_0 = -2.5\log\LR{L}{4\pi d_L²} + C.
 \end{equation}
 
-\mr{La magnitude $m$, dite "apparente", dépend donc de la distance. On définit
+La magnitude $m$, dite "apparente", dépend donc de la distance. On définit
 la magnitude \textit{absolue} --~liée cette fois à la luminosité intrinsèque du
 corps observé~-- comme la magnitude apparente qu'aurait la source si elle était
-située à une distance de $\SI{10}{pc}$}:
+située à une distance de $\SI{10}{pc}$ :
 
 \begin{equation}
     M = -2.5\log\LR{L}{4\pi\LF{\SI{10}{pc}}²} + C
 \end{equation}
 
-\mr{On peut alors définir le \textit{module de distance} $\m$ qui représente la
-distance de la source par:}
+On peut alors définir le \textit{module de distance} $\m$ qui représente la
+distance de la source par :
 
 \begin{equation}
     \m \equiv m - M = 5\log(d_L) - 5
 \end{equation}
 avec $d_L$ en parsec. 
 
-En considérant un univers plat homogène et isotrope,
-l'équation de \bsc{Friedmann}-\bsc{Lemaître} mène à une expression de $d_L$
-dépendant des paramètres cosmologiques d'après la relation
+En considérant un univers plat homogène et isotrope, l'équation de
+\bsc{Friedmann}-\bsc{Lemaître} mène à une expression de $d_L$ dépendant des
+paramètres cosmologiques d'après la relation
 
 \begin{equation}\label{dL}
     d_L = \LF{1 + z} \times c \LF{ \int_0^z \d z' \left[ \O_R
@@ -175,8 +155,6 @@ reliées par la relation
     1 = \O_R + \O_M + \O_\L.
 \end{equation}
 
-%\textcolor{orange}{Rajouter développement en annexe ?} \mr{Je ne pense pas. Si c'est ton cours de cosmo de M2, c'est inutile, mais ça peut etre une question lors de l'oral.}
-
 Ainsi, le module de distance $\m$ permet de de déterminer $d_L$ \textit{via} la
 mesure de la magnitude apparente $m$, si la magnitude absolue $M$ est connue.
 \mr{On appelle "chandelle standard“ un objet dont $M$ est ainsi prédictible.
@@ -185,24 +163,6 @@ d'être connu absolument, mais simplement d'être le même entre les objets que
 nous comparons. Les SNeIa sont de telles objets et sont également extrêmement
 brillantes ce qui nous permet de faire des mesures de distances à l'échelle
 cosmologique (milliards d'années lumière).}
-
-%, comme le
-%montre la figure ci-après :
-%
-%\begin{figure}[htbp!]
-%    \centering
-%    \includegraphics[width = .5\linewidth]{Rapport_figures/disp_40.png}
-%    \captionsetup{justification=centering}
-%    \caption{Effet de la dispersion naturelle de la magnitude absolue
-%    des SNe Ia sur la mesure du module de distance par rapport à l'évolution
-%attendue (en noir).}
-%    \label{disp_40}
-%\end{figure}
-
-%\begin{itemize}
-%    \item Mesure de magnitude, équations ;
-%    \item Dispersion naturelle, imprécision.
-%\end{itemize}
 
 \subsection{Les SNe Ia}\label{ssec:sneia}
 Si les SNe Ia sont considérées comme des chandelles standards, c'est parce
@@ -235,11 +195,6 @@ relations empiriques qui permettent de réduire cette dispersion d'un facteur
 trois, ce qui en en fait l'une des outils de mesure de distances le plus précis
 en astronomie.}
 
-%\begin{itemize}
-%    \item Spécificité astrophysique ;
-%    \item Pertinence cosmologique.
-%\end{itemize}
-
 \subsection{Courbes de lumière}\label{ssec:lc}
 
 \mr{Les SNeIa sont des objets astronomiques dit transitoires: leur flux évolue
@@ -252,7 +207,7 @@ affecter la luminosité relative être les gammes de longueurs d'onde observée
 paraître les objets plus rouges qu'ils ne le sont. On appelle courbe de lumière
 l'évolution de la luminosité d'un objet en fonction du temps. La
 figure~\ref{fig:lightcurves} montres les courbes de lumière d'une SNeIa
-(SN2011fe) dans cinqs bandes spectrales \cite{pereira2013}.}
+(SN2011fe) dans cinqs bandes spectrales \cite{pereira_spectrophotometric_2013}.}
 
 \begin{figure}[htbp!]
     \centering
@@ -279,7 +234,8 @@ luminosité dans la bande bleue ($\approx5000\AA$) à son maximum de luminosité
         courbe de lumière.
 \end{enumerate}
 
-\mr{L'algorithme SALT2 \cite{guy2007,guy2010} permet d'ajuster ces paramètres.}
+L'algorithme SALT2~\cite{guy_salt2_2007, guy_supernova_2010} permet d'ajuster
+ces paramètres.
 
 \begin{figure}[htbp!]
     \centering
@@ -622,10 +578,10 @@ permis de déterminer le stretch et le redshift moyens des 5 échantillons
 \end{itemize}
 
 \section{Conclusion}
-Conclusion
+Conclusion.
 
 %\bibliographystyle{aa}
-\bibliographystyle{siam}
+\bibliographystyle{unsrt}
 \bibliography{VIDSTIA}
 \addcontentsline{toc}{section}{Bibliographie}
 
