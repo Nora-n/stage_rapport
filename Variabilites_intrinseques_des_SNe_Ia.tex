@@ -69,34 +69,33 @@ Je tiens à remercier toutes les personnes qui ont contribué, de près ou de lo
 
 \section{Introduction}\label{sec:int}
 
-En cosmologie, l'étude des supernovae de type Ia (SNeIa) permet de mesurer
+En cosmologie, l'étude des supernovae de type Ia (SNe~Ia) permet de mesurer
 l'histoire de l'expansion de l'univers et ainsi d'étudier la physique des
 éléments fondamentaux qui le composent, et notamment celle de l'énergie noire
 \cite{perlmutter_measurements_1999, riess_observational_1998}. Avec aujourd'hui
-$\approx1000$ SNeIa, les incertitudes systématiques commencent à dominer le
-budget d'erreur lors de la mesure des paramètres
-cosmologiques~\cite{betoule_improved_2014, scolnic_complete_2018}. Parmi
-celles-ci, l'un des effet dominant est lié à notre connaissance limitée de la
-physique même des SNeIa~\cite{sullivan_dependence_2010, rigault_evidence_2013,
+$\approx1000$ SNe~Ia, les incertitudes systématiques commencent à dominer le
+budget d'erreur lors de la mesure des paramètres cosmologiques
+\cite{betoule_improved_2014, scolnic_complete_2018}. Parmi celles-ci, l'un des
+effet dominant est lié à notre connaissance limitée de la physique même des
+SNe~Ia~\cite{sullivan_dependence_2010, rigault_evidence_2013,
 rigault_confirmation_2015}.
 
-La cosmologie avec les SNeIa repose sur le fait qu'il est possible de
-prédire la luminosité des SNeIa à toutes distance de nous, et donc à tout moment
-dans le passé. Les SNeIa sont ainsi supposées être des chandelles standards (ou
-plutôt standardisables, nous le verrons) de la cosmologie. Cependant, la
-physique des étoiles change avec l'histoire de l'univers, alors serait-il
-possible que la physique des SNeIa change également? Si oui, est-ce que cela
-pourrait impacter la détermination des paramètres cosmologiques ? et de combien
-? 
+La cosmologie avec les SNe~Ia repose sur le fait qu'il est possible de prédire
+leur luminosité à toutes distance de nous, et donc à tout moment dans le passé.
+Les SNe~Ia sont ainsi supposées être des chandelles standards (ou plutôt
+standardisables, nous le verrons) de la cosmologie. Cependant, la physique des
+étoiles change avec l'histoire de l'univers : serait-il alors possible que la
+physique des SNe~Ia change également ? Si oui, est-ce que cela pourrait impacter
+la détermination des paramètres cosmologiques ? et de combien ?
 
-Dans ce rapport, nous \mr{nous étudions un paramètre intrinsèque à la physique
-de l'explosion du progéniteur en SNeIa: l'étallement de la courbe de lumière,
+Dans ce rapport, nous étudions un paramètre intrinsèque à la physique
+de l'explosion du progéniteur en SNe~Ia : l'étallement de la courbe de lumière,
 dit ”stretch” \mr{phillips199?}, et nous nous intéressons à son évolution
-potentielle en fonction de l'age de l'univers. Si nous trouvons qu'il évolue,
-alors nous aurons déterminer que la physique des SNeIa change en fonction du
+potentielle en fonction de l'âge de l'univers. Si nous trouvons qu'il évolue,
+alors nous aurons déterminé que la physique des SNe~Ia change en fonction du
 temps comme suggéré par
 \cite{howell_effect_2009, rigault_evidence_2013, childress_ages_2014,
-rigault_strong_2018}.}
+rigault_strong_2018}.
 
 \mr{ICI PRESENTATION DU PLAN. Nous commencerons section~\ref{sec:cosmo} par
 présenter la cosmologie avec les SNeIa en revenant sur le concept de chandelles
@@ -115,15 +114,15 @@ magnitude (m), tel que :
 
 où $m_0$ ($F_0$) représente une magnitude (flux) de référence.
 Le flux étant relié à la luminosité $L$ d'une source lumineuse à la distance
-$d_L$ par $F = L\times \left(4\pi d_L²\right)^{-1}$ alors :
+$d_L$ par $F = L\times \left(4\pi d_L²\right)^{-1}$, on a alors :
 
 \begin{equation}
     m - m_0 = -2.5\log\LR{L}{4\pi d_L²} + C.
 \end{equation}
 
-La magnitude $m$, dite "apparente", dépend donc de la distance. On définit
-la magnitude \textit{absolue} --~liée cette fois à la luminosité intrinsèque du
-corps observé~-- comme la magnitude apparente qu'aurait la source si elle était
+La magnitude $m$, dite « apparente », dépend donc de la distance. On définit
+la magnitude \textit{absolue} -- liée cette fois à la luminosité intrinsèque du
+corps observé -- comme la magnitude apparente qu'aurait la source si elle était
 située à une distance de $\SI{10}{pc}$ :
 
 \begin{equation}
@@ -157,15 +156,15 @@ reliées par la relation
 
 Ainsi, le module de distance $\m$ permet de de déterminer $d_L$ \textit{via} la
 mesure de la magnitude apparente $m$, si la magnitude absolue $M$ est connue.
-\mr{On appelle "chandelle standard“ un objet dont $M$ est ainsi prédictible.
+On appelle « chandelle standard » un objet dont $M$ est ainsi prédictible.
 Remarquez que pour des mesures de distances relatives, $M$ n'as pas besoin
 d'être connu absolument, mais simplement d'être le même entre les objets que
-nous comparons. Les SNeIa sont de telles objets et sont également extrêmement
+nous comparons. Les SNe~Ia sont de telles objets et sont également extrêmement
 brillantes ce qui nous permet de faire des mesures de distances à l'échelle
-cosmologique (milliards d'années lumière).}
+cosmologique (milliards d'années lumière).
 
-\subsection{Les SNe Ia}\label{ssec:sneia}
-Si les SNe Ia sont considérées comme des chandelles standards, c'est parce
+\subsection{Les SNe~Ia}\label{ssec:sneia}
+Si les SNe~Ia sont considérées comme des chandelles standards, c'est parce
 qu'elles obéissent au même mécanisme d'explosion. Bien qu'il soit encore mal
 compris, on sait qu'il résulte de l'augmentation de la masse de naines
 blanches, des étoiles inertes très denses, qui mènerait à une explosion
@@ -187,27 +186,26 @@ des buts de l'utilisation des SNe Ia en cosmologie est de mieux comprendre le
 comportement de cette énergie noire, sa densité précise et l'évolution de sa
 densité.
 
-\mr{\textit{Paragraphe bougé}} Mais en réalité, il existe une dispersion
-naturelle d'environ 40\% des magnitudes absolues des SNe Ia. Elles ne sont donc
-pas parfaitement standards et cette dispersion \mr{correspond une imprécision de
-$\approx$20\% sur la valeur de la distance déduite. Cependant, il existe des
-relations empiriques qui permettent de réduire cette dispersion d'un facteur
-trois, ce qui en en fait l'une des outils de mesure de distances le plus précis
-en astronomie.}
+Mais en réalité, il existe une dispersion naturelle d'environ 40\% des
+magnitudes absolues des SNe~Ia. Elles ne sont donc pas parfaitement standards et
+cette dispersion correspond une imprécision de $\approx 20\%$ sur la valeur de
+la distance déduite. Cependant, il existe des relations empiriques qui
+permettent de réduire cette dispersion d'un facteur trois, ce qui en en fait
+l'un des outils de mesure de distances le plus précis en astronomie.
 
 \subsection{Courbes de lumière}\label{ssec:lc}
 
-\mr{Les SNeIa sont des objets astronomiques dit transitoires: leur flux évolue
-en fonction du temps. La forme de cette évolution dépend de la physique
-intrinsèque à l'explosion du progéniteur --~les éléments radioactifs créés et
-détruits notamment. Les éléments extrinsèques, notamment les milieux
-interstellaires de la galaxie hôte et de notre propres galaxie, eux, peuvent
-affecter la luminosité relative être les gammes de longueurs d'onde observée
---~les poussières interstellaires absorbent plus en bleu qu'en rouge, faisant
-paraître les objets plus rouges qu'ils ne le sont. On appelle courbe de lumière
+Les SNe~Ia sont des objets astronomiques dit transitoires : leur flux évolue en
+fonction du temps. La forme de cette évolution dépend de la physique intrinsèque
+à l'explosion du progéniteur -- les éléments radioactifs créés et détruits
+notamment. Les éléments extrinsèques, notamment les milieux interstellaires de
+la galaxie hôte et de notre propre galaxie, eux, peuvent affecter la luminosité
+relative entre les gammes de longueurs d'onde observées -- les poussières
+interstellaires absorbent plus dans le bleu que dans le rouge, faisant paraître
+les objets plus rouges qu'ils ne le sont. On appelle « courbe de lumière »
 l'évolution de la luminosité d'un objet en fonction du temps. La
-figure~\ref{fig:lightcurves} montres les courbes de lumière d'une SNeIa
-(SN2011fe) dans cinqs bandes spectrales \cite{pereira_spectrophotometric_2013}.}
+figure~\ref{fig:lightcurves} montres les courbes de lumière d'une SNe~Ia
+(SN2011fe) dans cinq bandes spectrales \cite{pereira_spectrophotometric_2013}.
 
 \begin{figure}[htbp!]
     \centering
@@ -220,17 +218,17 @@ ladite SNe Ia.}
     \label{fig:lightcurves}
 \end{figure}
 
-\mr{Ainsi, la chandelle standard de la SNIa est en réalité définie comme sa
-luminosité dans la bande bleue ($\approx5000\AA$) à son maximum de luminosité}.
+Ainsi, la chandelle standard de la SNe~Ia est en réalité définie comme sa
+luminosité dans la bande bleue ($\approx5000\A$) à son maximum de luminosité.
 
-\mr{Les courbes de lumières des SNeIa sont paramètrisées par trois éléments:}
+Les courbes de lumières des SNe~Ia sont paramétrisées par trois éléments :
 
 \begin{enumerate}
-    \item \mr{Le maximum de luminosité dans la bande B, il s'agit du “$m$ des
-        SNeIa“.}
-    \item La couleur ("c"), défini par la différence de magnitude au maximum
+    \item Le maximum de luminosité dans la bande B, il s'agit du « $m$ des
+        SNe~Ia » ;
+    \item La couleur (« c »), définie par la différence de magnitude au maximum
         d'émission entre les bandes vertes et bleues ;
-    \item Le \textit{stretch} ("$x_1$"), définissant l'élargissement de la
+    \item Le \textit{stretch} (« $x_1$ »), définissant l'élargissement de la
         courbe de lumière.
 \end{enumerate}
 
@@ -248,13 +246,13 @@ ladite SNe Ia.}
     \label{lightcurves}
 \end{figure}
 
-La définition de ces paramètres n'est pas anodine : il a en effet été montré
-qu'une corrélation forte existe entre la valeur de ces paramètres et la
-magnitude absolue $M_B{}^{\text{max}}$ d'une supernova. Notamment, les SNe Ia
-avec une grande durée d'explosion (grand stretch) on une luminosité intrinsèque
-plus grande (relation appelée "brighter-slower"), et que les SNe Ia les plus
-bleues sont également plus lumineuses (relation "brighter-bluer"). On peut voir
-ces corrélations figure \ref{brighter_slower_bluer}.
+La définition de ces paramètres n'est pas anodine : il existe une corrélation
+entre $M_B$ (la magnitude absolue des SNe~Ia dérivée de $m_B$) et le stretch
+$x_1$ et la couleur $c$ (mais pas entre $x_1$ et $c$ par construction). Les
+SNe~Ia à évolution lente (grand stretch) ont une luminosité intrinsèque plus
+grande (relation "brighter-slower") \mr{phillips199?} et les SNe~Ia les plus
+bleues sont plus lumineuses (relation "brighter-bluer") \mr{tripp199?,
+Riess1996}. Ces relations sont illustrées figure \ref{brighter_slower_bluer}.
 
 \begin{figure}[htbp!]
     \centering
@@ -266,24 +264,31 @@ couleur (« color ») d'après l'algorithme SALT2.}
     \label{brighter_slower_bluer}
 \end{figure}
 
-On peut alors inclure ces relations linéaires dans l'expression de la magnitude
-absolue, \textit{via} la relation
+Pour réduire la dispersion naturelle de magnitude absolue des SNeIa, on peut
+alors inclure ces relations linéaires dans l'expression de la magnitude absolue,
+de telle sorte que :
 
 \begin{equation}
-    \D M_B{}^{\text{corr}} \equiv \LF{M_B{}^{\text{max}} - M_B{}^0} + \LF{\a x_1
-    - \b c}
+    M_B{}^{\text{corr}} \equiv M_B{}^{\text{max}} + \LF{\a x_1 - \b c}
 \end{equation}
 
 où $\a$ est le coefficient du stretch, et $\b$ celui de la couleur, tous les
-deux positifs, avec $M_B{}^0$ la magnitude moyenne des SNe Ia. Tous ces
-paramètres sont ajustés simultaniément sur l'ensemble des données disponibles.
-Ces relations supplémentaires permettent de réduire l'incertitude sur le
-paramètre de magnitude absolue, et d'avoir une détermination de la distance dont
-l'erreur est diminuée à 8\% (cf figure \ref{disp_20}) \textit{via} la relation
+deux positifs ; $M_B{}^{corr}$ est la nouvelle définition de la magnitude
+absolue des SNeIa, dite « standardisée ». Ces trois paramètres sont ajustés
+simultanément sur l'ensemble des données disponibles.
+
+Ces relations supplémentaires permettent de réduire l'incertitude sur la
+mesure de distance, puisque la dispersion de magnitude absolue est réduite à
+$\approx 0.15 \mathrm{mag}$ \cite{betoule_improved_2014}, soit une précision en
+distance de l'ordre de 8\%. La nouvelle définition du module de distance
+(standardisé) des SNeIa est :
 
 \begin{equation}
     \m = m - M +\a x_1 - \b c
 \end{equation}
+
+La réduction de la dispersion dans le diagramme de Hubble est illustré
+\ref{disp_20} avec les données de SNfactory \cite{rigault_strong_2018}.
 
 \begin{figure}[htbp!]
     \centering
@@ -302,9 +307,8 @@ L'utilisation de cette relation a alors permis d'améliorer la précision des
 mesures de distance, et ainsi discriminer différentes valeurs possibles pour les
 paramètres cosmologiques : cela a mené à la découverte de l'expansion accélérée
 de l'Univers \textit{via} une valeur non-nulle de $\O_\L$ pour laquelle un prix
-Nobel a été descerné. Avant cette étude, l'évolution attendue du module de
-distance des SNe Ia était indiqué par la courbe grise dans la figure
-\ref{hub_acc_exp}.
+Nobel a été descerné en 2011. La dernière compilation des SNe~Ia est
+présentée fig~\ref{hub_acc_exp} [\mr{METTRE CELLE DE SCOLNIC}].
 
 \begin{figure}[htbp!]
     \centering
@@ -318,29 +322,24 @@ distance des SNe Ia était indiqué par la courbe grise dans la figure
     \label{hub_acc_exp}
 \end{figure}
 
-\begin{itemize}
-    \item Définitions ;
-    \item Relations empiriques, équation corrigée.
-\end{itemize}
-
 \subsection{Incertitudes systématiques}\label{ssec:syst}
-Cette avancée monumentale dans la cosmologie a pu montrer la puissance des SNe
-Ia dans la détermination de paramètres cosmologiques. Depuis cette découverte,
-qui ne se basait que sur une centaine de données de SNe Ia, plus de données ont
-été accumulées, et la précision sur les mesures de $\O_M$ et $\O_\L$ s'est
-améliorée. Cependant, sur la totalité de l'incertitude sur ces paramètres, la
-part des incertitudes systématiques est très importante. C'est non seulement une
-limitation à la précision des mesures, mais également un danger pour la justesse
-de celles-ci. Par exemple, dans le but d’étudier l’énergie noire, et notamment
-son paramètre d’état $\w$ qui devrait être de $-1$ pour correspondre à un fluide
-de pression négative et sa dérivée $\w_a$ qui traduit l’évolution de ce
-comportement au cours du temps, il convient de tester leur concordance avec
-différents modèles cosmologiques. Il a été montré que si les erreurs
-systématiques ne sont pas prises en compte et qu'on les considère comme
-négligeable devant les incertitudes statistiques, l'ajout de nouvelles données
-(qui est le but de la collaboration LSST qui amènera environ 100 000 données de
-SNe Ia à commencer dans 3 ans) nous mènerait forcément à un résultat éloigné du
-modèle que l'on souhaite tester (cf. figure \ref{err_syst}).
+
+Depuis la découverte de l'accélération de l'expansion de l'univers, qui ne se
+basait que sur une centaine de données de SNe Ia, plus de données ont été
+accumulées, et la précision sur les mesures de $\O_M$ et $\O_\L$ s'est
+améliorée. Nous pouvons maintenant mesurer le paramètre d'équation d'état de
+l'énergie noire $w$, qui devrait valoir $-1$ s'il s'agit d'une constante
+cosmologique $\Lambda$. Aujourd'hui avec $\approx1000$ SNe~Ia, $w$ est mesuré
+avec une précision de 5\% et est compatible avec -1 \cite{betoule_improved_2014,
+scolnic_complete_2018}. Dans un futur proche (2022), le \textit{Large Synaptic
+Survey Telescope} (LSST, récemment renommé Vera Rubin Survey Telescope) installé
+au Chili devrait acquérir $\approx 10000$ SNe~Ia par an. Un des objectifs
+principaux du sondage cosmologique et de mesurer $w$ au pourcent, mais surtout,
+de mesurer $w_a$, l'évolution potentielle de $w$ en fonction du temps, à 10\% ;
+$w_a$ devrait être 0 si l'énergie noire est un simple constante cosmologique.
+Cependant, déjà aujourd'hui, les erreurs systématiques dominent la budget total
+d'erreur de la mesure des paramètres cosmologiques avec les SNe~Ia, comme
+illustré fig~\ref{scolnic_syst}.
 
 \begin{figure}[htbp!]
     \centering
@@ -355,29 +354,34 @@ modèle que l'on souhaite tester (cf. figure \ref{err_syst}).
     \label{scolnic_syst}
 \end{figure}
 
+Pour continuer à améliorer les mesures cosmologiques, il est donc nécessaire de
+travailler sur les sources d'erreurs systématiques, faute de quoi, il sera
+impossible d'exploiter l'immense masse de données fournie par LSST. Une des
+erreurs dominantes et encore peu étudiée est l'impact de notre connaissance
+limitée de la physique des SNe~Ia sur la mesure des paramètres cosmologiques
+\cite{rigault_strong_2018} et notamment sur l'évolution potentielle de
+$M_B^{\mathrm{corr}}$ en fonction du redshift. La fig~\ref{err_syst} montre une
+estimation de l'impact potentiel qu'aurait une évolution réaliste de la physique
+des SNe~Ia en fonction du temps sur l'estimation des paramètres ($w$, $w_a$).
+Non seulement l'erreur systématique associée est plus grande que la précision
+souhaitée pour LSST, mais surtout, la zone mesurée est en désaccord complet avec
+ce qui est attendu. La mesure est donc non seulement moins précise, mais elle
+est aussi faussée. C'est dans ce cadre que s'inscrit mon stage et la thèse qui
+en découle.
+
 \begin{figure}[htbp!]
     \centering
     \includegraphics[width=.5\linewidth]{Rapport_figures/error.PNG}
     \captionsetup{justification=centering}
-    \caption{Erreur attendue sur la mesure de $\w$ et $\w_a$ en ne considérant
+    \caption{Erreur attendue sur la mesure de $w$ et $w_a$ en ne considérant
     que la réduction des erreurs statistiques sans prendre en compte les erreurs
     systématiques.}
     \label{err_syst}
 \end{figure}
 
-Ainsi, si l'ajout de données permet de réduire
-les incertitudes statistiques, il paraît nécessaire de travailler sur la
-physique à l'origine de ces variations de magnitudes absolues pour pouvoir, dans
-l'idéal, réaliser le même travail qui a été fait avec le stretch et la couleur
-mais pour d'autres paramètres. C'est l'objet de ce stage et de la thèse qui en
-découle.
+\section{Construction de l'échantillon d'étude}\label{sec:complet}
+\subsection{Évolution de propriétés astrophysiques}\label{ssec:prog}
 
-\begin{itemize}
-    \item Importance dans les mesures actuelles ;
-    \item Importance dans les mesures futures.
-\end{itemize}
-
-\subsection{Problème du progéniteur}\label{ssec:prog}
 Un des problèmes majeurs à la réalisation de ce but est que l'on n'a jamais
 accès aux supernovae avant qu'elles explosent, sous leur forme de
 \textit{progéniteur}, étant donné que les courbes de lumière sont acquises à
@@ -402,7 +406,6 @@ lecteur-ice pourra se référer aux ressources mises en ligne publiquement sur
 \href{https://github.com/Nora-n/variaIa/tree/master/variaIa}{GitHub}
 (https://github.com/Nora-n/variaIa/tree/master/variaIa).
 
-\section{Construction d'un échantillon complet}\label{sec:complet}
 \subsection{Effets de sélection}\label{ssec:selec}
 La première étape à l'établissement de lois physiques tentant de relier les
 variations de magnitudes absolues avec des paramètres mesurable consiste à
