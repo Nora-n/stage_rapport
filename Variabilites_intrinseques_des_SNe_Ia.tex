@@ -102,6 +102,12 @@ présenter la cosmologie avec les SNeIa en revenant sur le concept de chandelles
 standard(isable)s et la détermination des paramètres cosmologiques.
 BLABLABLA...}
 
+Dans la suite de ce rapport, et pour éviter la surcharge de lignes de code, le-a
+lecteur-ice pourra se référer aux ressources mises en ligne publiquement sur
+\href{https://github.com/Nora-n/variaIa/tree/master/variaIa}{GitHub}
+(https://github.com/Nora-n/variaIa/tree/master/variaIa).
+
+
 \section{Cosmologie avec les Supernovae de type Ia}\label{sec:cosmo}
 \subsection{Chandelles standards et diagramme de Hubble}\label{ssec:hub}
 
@@ -235,24 +241,14 @@ Les courbes de lumières des SNe~Ia sont paramétrisées par trois éléments :
 L'algorithme SALT2~\cite{guy_salt2_2007, guy_supernova_2010} permet d'ajuster
 ces paramètres.
 
-\begin{figure}[htbp!]
-    \centering
-    \includegraphics[width=.5\linewidth]{Rapport_figures/lightcurve.png}
-    \captionsetup{justification=centering}
-    \caption{Exemple de courbe de lumière d'une supernova depuis son explosion
-    pour différentes longueurs d'ondes. On peut y définir un paramètre de
-couleur et un paramètre de \textit{stretch} qui estime la durée d'explosion de
-ladite SNe Ia.}
-    \label{lightcurves}
-\end{figure}
-
 La définition de ces paramètres n'est pas anodine : il existe une corrélation
 entre $M_B$ (la magnitude absolue des SNe~Ia dérivée de $m_B$) et le stretch
 $x_1$ et la couleur $c$ (mais pas entre $x_1$ et $c$ par construction). Les
 SNe~Ia à évolution lente (grand stretch) ont une luminosité intrinsèque plus
-grande (relation "brighter-slower") \mr{phillips199?} et les SNe~Ia les plus
-bleues sont plus lumineuses (relation "brighter-bluer") \mr{tripp199?,
-Riess1996}. Ces relations sont illustrées figure \ref{brighter_slower_bluer}.
+grande (relation "brighter-slower") \cite{noauthor_absolute_nodate} et les
+SNe~Ia les plus bleues sont plus lumineuses (relation "brighter-bluer")
+\cite{tripp_two-parameter_1998, riess_first_2006}. Ces relations sont illustrées
+figure \ref{brighter_slower_bluer}.
 
 \begin{figure}[htbp!]
     \centering
@@ -287,7 +283,7 @@ distance de l'ordre de 8\%. La nouvelle définition du module de distance
     \m = m - M +\a x_1 - \b c
 \end{equation}
 
-La réduction de la dispersion dans le diagramme de Hubble est illustré
+La réduction de la dispersion dans le diagramme de Hubble est illustré figure
 \ref{disp_20} avec les données de SNfactory \cite{rigault_strong_2018}.
 
 \begin{figure}[htbp!]
@@ -308,18 +304,17 @@ mesures de distance, et ainsi discriminer différentes valeurs possibles pour le
 paramètres cosmologiques : cela a mené à la découverte de l'expansion accélérée
 de l'Univers \textit{via} une valeur non-nulle de $\O_\L$ pour laquelle un prix
 Nobel a été descerné en 2011. La dernière compilation des SNe~Ia est
-présentée fig~\ref{hub_acc_exp} [\mr{METTRE CELLE DE SCOLNIC}].
+présentée fig~\ref{fig:hub_current}.
 
 \begin{figure}[htbp!]
     \centering
-    \includegraphics[width=.5\linewidth]{Rapport_figures/bet_al_2.PNG}
+    \includegraphics[width=.5\linewidth]{Rapport_figures/hub_current.png}
     \captionsetup{justification=centering}
-    \caption{Diagramme de Hubble actuel (en couleurs, une par échantillon
-             d'observation) comparé au diagramme de Hubble avant la découverte 
-             de l'expansion accélérée de l'Univers (en gris) en haut, et
-             diagramme résiduel où l'on a retiré l'évolution théorique du module
-             de distance.}
-    \label{hub_acc_exp}
+    \caption{En haut, diagramme de Hubble actuel (en couleurs, une par
+             échantillon d'observation) et diagramme résiduel où l'on a retiré
+             l'évolution théorique du module de distance.
+             \cite{scolnic_complete_2018}}
+    \label{fig:hub_current}
 \end{figure}
 
 \subsection{Incertitudes systématiques}\label{ssec:syst}
@@ -339,7 +334,7 @@ de mesurer $w_a$, l'évolution potentielle de $w$ en fonction du temps, à 10\% 
 $w_a$ devrait être 0 si l'énergie noire est un simple constante cosmologique.
 Cependant, déjà aujourd'hui, les erreurs systématiques dominent la budget total
 d'erreur de la mesure des paramètres cosmologiques avec les SNe~Ia, comme
-illustré fig~\ref{scolnic_syst}.
+illustré fig~\ref{fig:scolnic_syst}.
 
 \begin{figure}[htbp!]
     \centering
@@ -349,9 +344,9 @@ illustré fig~\ref{scolnic_syst}.
     mesure des paramètres $\O_M$ et $\O_\L$ pour la découverte historique de
     \bsc{Riess et. al} (R98, en blanc) se basant sur 100 données de SNe Ia, et
     pour les échantillons actuels utilisant environ 1000 SNe Ia (en rouge). En
-    gris est indiqué la part des incertitudes systématiques à l'incertitude
+    gris est indiqué la part des incertitudes statistiques à l'incertitude
     totale. \cite{scolnic_complete_2018}}
-    \label{scolnic_syst}
+    \label{fig:scolnic_syst}
 \end{figure}
 
 Pour continuer à améliorer les mesures cosmologiques, il est donc nécessaire de
@@ -360,14 +355,14 @@ impossible d'exploiter l'immense masse de données fournie par LSST. Une des
 erreurs dominantes et encore peu étudiée est l'impact de notre connaissance
 limitée de la physique des SNe~Ia sur la mesure des paramètres cosmologiques
 \cite{rigault_strong_2018} et notamment sur l'évolution potentielle de
-$M_B^{\mathrm{corr}}$ en fonction du redshift. La fig~\ref{err_syst} montre une
-estimation de l'impact potentiel qu'aurait une évolution réaliste de la physique
-des SNe~Ia en fonction du temps sur l'estimation des paramètres ($w$, $w_a$).
-Non seulement l'erreur systématique associée est plus grande que la précision
-souhaitée pour LSST, mais surtout, la zone mesurée est en désaccord complet avec
-ce qui est attendu. La mesure est donc non seulement moins précise, mais elle
-est aussi faussée. C'est dans ce cadre que s'inscrit mon stage et la thèse qui
-en découle.
+$M_B^{\mathrm{corr}}$ en fonction du redshift. La fig~\ref{fig:err_syst} montre
+une estimation de l'impact potentiel qu'aurait une évolution réaliste de la
+physique des SNe~Ia en fonction du temps sur l'estimation des paramètres ($w$,
+$w_a$).  Non seulement l'erreur systématique associée est plus grande que la
+précision souhaitée pour LSST, mais surtout, la zone mesurée est en désaccord
+complet avec ce qui est attendu. La mesure est donc non seulement moins précise,
+mais elle est aussi faussée. C'est dans ce cadre que s'inscrit mon stage et la
+thèse qui en découle.
 
 \begin{figure}[htbp!]
     \centering
@@ -376,12 +371,163 @@ en découle.
     \caption{Erreur attendue sur la mesure de $w$ et $w_a$ en ne considérant
     que la réduction des erreurs statistiques sans prendre en compte les erreurs
     systématiques.}
-    \label{err_syst}
+    \label{fig:err_syst}
 \end{figure}
 
 \section{Construction de l'échantillon d'étude}\label{sec:complet}
-\subsection{Évolution de propriétés astrophysiques}\label{ssec:prog}
 
+Dans ce stage, nous avons cherché à mesurer si la propriété intrinsèque des
+SNe~Ia changeait en fonction du temps, ou, ce qui est équivalent, du redshift.
+Comme nous l'avons vu section~\ref{ssec:lc}, le stretch est une propriété
+purement intrinsèque à l'explosion du progéniteur en SNe~Ia. Ainsi, si nous
+pouvons détecter une évolution de la distribution de stretch en fonction du
+redshift, alors nous auront prouvé qu'en effet les SNe~Ia changent avec le
+temps. Il nous faut donc comparer des SNe~Ia dans plusieurs gammes de redshift
+et comparer leurs distributions de stretch. Cependant, les effets de sélection
+affectent la distribution de stretch : il est donc dans un premier temps
+nécessaire de savoir quelles SNe~Ia sont affectée ou non par ces effets de
+sélection.
+
+Nous discutons les effets de sélection plus en détails
+section~\ref{ssec:selec}, puis, dans la section~\ref{ssec:det} nous montrons
+comment construire un échantillon complet (i.e. affranchis des effets de
+sélection) ; échantillons que nous utiliserons par la suite pour nos analyses
+(cf. section~\ref{sec:stretchevol}).
+
+\subsection{Effets de sélection}\label{ssec:selec}
+
+L'observation du nombre de SNe Ia en fonction du redshift illustre l'existence
+d'effets de sélection : si l'on suppose une répartition homogène et isotrope des
+supernovae dans l'espace, alors on s'attend à avoir un nombre croissant de
+SNe~Ia avec le redshift ($z$), tel que $N_{\text{SNe~Ia}} \propto z³$. Mais
+lorsque l'on regarde la distribution de SNe~Ia en fonction du redshift, comme
+montré fig~\ref{fig:redshift_miss} pour l'échantillon de SNLS
+\cite{astier_supernova_2006, betoule_improved_2014}, si cette relation semble
+vérifiée jusqu'à une certaine distance (la distribution croît), nous constatons
+qu'à partir d'un certain redshift, le nombre de SNe~Ia observé réduit. Dans ce
+cas, la transition semble s'effectuer autour de $z\approx0.6$.
+
+\begin{figure}[htbp!]
+    \centering
+    \includegraphics[width=.5\linewidth]{Rapport_figures/redshift_miss.png}
+    \captionsetup{justification=centering}
+    \caption{Histogramme du nombre de SNe Ia observées en fonction du redshift
+    pour les données de l'échantillon SNLS (SuperNova Legacy Survey).}
+    \label{fig:redshift_miss}
+\end{figure}
+
+Pour comprendre cette distribution, rappelons nous que nous mesurons l'évolution
+du flux des SNe~Ia pour en dériver la distance (voir section~\ref{ssec:hub}. Or,
+les instruments (caméras ou spectrographes, selon) ont une limite de détection
+de flux au dessous de laquelle les objets ont une luminosité trop faible pour
+être détectée. Pour les SNeIa, qui ont toutes une luminosité relativement
+similaire ; cela signifie qu'à partir d'une certaine distance, leur flux sera
+trop faible pour être détecté. C'est ce que nous observons
+fig.~\ref{fig:redshift_miss} : à $z\lesssim0.6$ toutes les SNe~Ia sont assez
+lumineuses pour etre observées, à $z\gtrsim 0.6$ les SNe~Ia relativement
+sous-lumineuses manquent en premier, puis celles de moins en moins lumineuses
+jusqu'à ce qu'elles soient toutes trop faibles car trop lointaines.
+
+Si cette sélection en luminosité était indépendante du stretch alors il n'y
+aurait pas de problème, nous pourrions utiliser toutes les SNe~Ia pour notre
+analyse. Cependant, comme discuté section~\ref{ssec:lc}, à cause de la relation
+"brighter-slower", les SNe~Ia les moins lumineuses sont également celles qui ont
+un plus petit stretch en moyenne. Ainsi, une fois passé un certain redshift (ici
+$z\sim0.6$) la distribution de stretch de l'échantillon n'est plus
+représentative de ce que la nature fournit. C'est pourquoi, pour étudier
+l'évolution de la distribution de stretch des SNe~Ia en fonction du redshift, il
+faut exclure les SNe~Ia au-delà de ce redshift caractéristique qui dépend de
+l'instrument utilisé, et donc de l'échantillon.
+
+L'objectif est donc de trouver, pour chaque échantillon, la valeur de ce
+redshift caractéristique et de considérer seulement les SNe~Ia de cet
+échantillon disposant d'un redshift inférieur à ce redshift limite. Nous pouvons
+ensuite combiner les SNe~Ia des différents échantillons pour notre étude du
+stretch en fonction du redshift puisqu'elles seront toutes représentatives de ce
+que la nature créé.
+
+\subsection{Détermination du redshift limite}\label{ssec:det}
+
+Pour déterminer le redshift limite au delà duquel les effets de sélection
+deviennent non-négligeable, l'approche qui a été choisie repose sur la
+comparaison entre l'évolution attendue du nombre de SNe~Ia par intervalle de
+redshift et l'évolution observée. Une étude plus rigoureuse aurait été de
+s'intéresser aux caractéristiques de limite de détection de chaque instrument,
+mais nous ne disposions pas, pour ce stage, de ces informations.
+
+Comme discuté précédemment, on s'attend à avoir un nombre de supernovae qui
+croît proportionnellement à $z³$. En utilisant l'histogramme précédent, on a,
+pour chaque intervalle, le nombre de supernovae observées. En définissant une
+fonction de paramètre $a$ telle que $N_{\text{SNe~Ia}} = a\times V(z)$, où
+$V(z)$ est le volume d'univers à un redshift donné, on peut trouver pour chaque
+milieu d'intervalle le nombre attendu de supernovae observées selon cette
+fonction. On peut alors utiliser une statistique poissonienne pour trouver la
+probabilité d'avoir ce nombre attendu sachant qu'on en a effectivement observé
+le nombre correspondant aux intervalles. Le paramètre libre $a$ est dérivé
+en maximisant cette probabilité.
+
+Comme illustré figure \ref{fig:zmax_method}, lorsqu'on dérive $a$ en ne
+considérant que les premiers intervalles de redshift la correspondance est
+bonne. On augmente ensuite le redshift limite utilisé pour dériver $a$ et on
+compare la qualité de la minimisation. Le redshift limite est celui à partir
+duquel la qualité de la minimisation décroît. Cependant, cette méthode dépend du
+choix initial du nombre d'intervalles de redshift. Pour s'affranchir de cela
+nous avons, pour chaque échantillon, appliqué 100 fois la méthode précédente en
+changeant à chaque fois de manière aléatoire le nombre d'intervalles (entre 5 et
+13) tout en changeant les bornes globales de redshift inférieur et supérieure.
+
+\begin{figure}[htbp!]
+    \centering
+    \subfigure[7 premiers]{\includegraphics[width=.4\linewidth]{Rapport_figures/zmax_method.png}}
+    \subfigure[9 premiers]{\includegraphics[width=.4\linewidth]{Rapport_figures/zmax_method_2.png}}
+    \captionsetup{justification=centering}
+    \caption{Graphique présentant l'évolution de la probabilité poissonienne
+        d'observer un nombre de supernovae correspondant à la fonction
+        $N_{\text{SNe~Ia}} = a\times V(z)$ sachant que l'on en a observé le
+        nombre correspondant à l'intervalle. On a ici un exemple pour on n'a
+        considéré que les 9 premiers intervalles pour la minimisation, en
+        extrapolant ce que cette probabilité deviendrait en prenant plus
+        d'intervalles (en pointillés).}
+    \label{fig:zmax_method}
+\end{figure}
+
+Les courbes d'évolution de la probabilité poissonienne sont enregistrées puis
+interpolées linéairement. La figure~\ref{fig:zmax_result} montre l'évolution
+médian (et écart type pour la bande d'erreur) de la probabilité que le nombre de
+SNe~Ia observé par l'échantillon considéré à un redshift donné soit compatible
+celui attendu si l'échantillon était complet.
+
+\begin{figure}[htbp!]
+    \centering
+    \includegraphics[width=.5\linewidth]{Rapport_figures/zmax_result.png}
+    \captionsetup{justification=centering}
+    \caption{Résultat du procédé de détermination du redshift maximal à partir
+    duquel les effets de sélections ne sont pas anodins.}
+    \label{fig:zmax_result}
+\end{figure}
+
+\mr{MANQUE, COMME ON OBTIENT $Z_MAX$ MAINTENANT QU'ON A LE PLOT}
+\mr{STOPPED HERE}
+
+\subsection{Échantillon utilisé}
+
+On a ainsi déterminé les valeurs maximales de redshifts pour lesquelles on n'a
+pas d'effet de sélection pour les différents échantillons dont on possède les
+données. Tous les raisonnements qui suivent s'appuient uniquement sur ces
+données dites « complètes », et ce procédé ne sera plus mentionné dans la suite.
+Le résultat de ce procédé est représenté figure \ref{fig:surveys_cuts}.
+
+\begin{figure}[htbp!]
+    \centering
+    \includegraphics[width=.5\linewidth]{Rapport_figures/surveys_cuts.pdf}
+    \captionsetup{justification=centering}
+    \caption{Représentation des données des échantillons subissant des effets
+    de sélection après application du procédé : les points creux représentent
+    les données ignorées.}
+    \label{fig:surveys_cuts}
+\end{figure}
+
+\section{Modèle d'évolution}\label{sec:stretchevol}
 Un des problèmes majeurs à la réalisation de ce but est que l'on n'a jamais
 accès aux supernovae avant qu'elles explosent, sous leur forme de
 \textit{progéniteur}, étant donné que les courbes de lumière sont acquises à
@@ -395,149 +541,48 @@ les propriétés des progéniteurs évoluent également avec le temps, et donc a
 $z$, on s'attend à avoir une variation de la magnitude absolue avec le redshift,
 ce qui fausserait les mesures du diagramme de Hubble.
 
-\begin{itemize}
-    \item Progéniteur inconnus :
-    \item L moyennes différentes avec $z$ ou échantillon ;
-    \item Évolution du \textit{lsSFR}.
-\end{itemize}
-
-Dans la suite de ce rapport, et pour éviter la surcharge de lignes de code, le-a
-lecteur-ice pourra se référer aux ressources mises en ligne publiquement sur
-\href{https://github.com/Nora-n/variaIa/tree/master/variaIa}{GitHub}
-(https://github.com/Nora-n/variaIa/tree/master/variaIa).
-
-\subsection{Effets de sélection}\label{ssec:selec}
-La première étape à l'établissement de lois physiques tentant de relier les
-variations de magnitudes absolues avec des paramètres mesurable consiste à
-travailler sur des données sans effet de sélection qui biaiserait
-potentiellement les données recueillies. Or, l'observation du nombre de SNe Ia
-analysée en fonction du redshift nous montre l'existence d'un effet de sélection
-: en supposant une répartition homogène et isotrope des supernovae dans
-l'espace, on s'attend à avoir un nombre de SNe Ia à une certaine distance comme
-étant proportionnel au volume de l'espace entre l'observateur et cette distance.
-En terme de redshift, on s'attend à la relation $\#\text{SNe Ia} \propto z³$. Si
-cette relation est vérifiée jusqu'à une certaine distance, la figure
-\ref{redshift_miss} nous montre qu'à partir d'un moment, il n'y a plus de
-nouvelles supernovae observées.
-
-\begin{figure}[htbp!]
-    \centering
-    \includegraphics[width=.5\linewidth]{Rapport_figures/redshift_miss.png}
-    \captionsetup{justification=centering}
-    \caption{Histogramme du nombre de SNe Ia observées en fonction du redshift
-    pour les données de l'échantillon SNLS (SuperNova Legacy Survey).}
-    \label{redshift_miss}
-\end{figure}
-
-Cette évolution est due au fait que notre moyen d'observation des supernovae est
-la mesure de flux, comme discuté dans l'introduction (partie \ref{ssec:hub}).
-Ainsi, la luminosité totale de la supernova est divisée sur sa surface de
-rayonnement, proportionnelle au carré de la distance, et il arrive une distance
-où les SNe Ia de luminosités intrinsèques les plus faibles vont être les
-premières à ne pas pouvoir être captée par les éléments CCD des instruments de
-mesure. Or, comme discuté dans la partie \ref{ssec:lc}, les supernovae de
-grandes durées d'explosion sont également plus lumineuses (relation
-"brighter-slower"), ce qui veut dire que les supernovae les moins lumineuses
-sont également celles de petite durée d'explosion (petit stretch). Le fait de
-louper des supernovae à cause d'une luminosité intrinsèque trop faible par
-rapport à leur distance à nous n'est donc pas anodin, et il faut s'en prévenir.
-
-\begin{itemize}
-    \item Histogramme échantillons ;
-    \item Rappel relation \textcolor{red}{brighter-slower} et conclusion.
-\end{itemize}
-
-\subsection{Méthode de détermination}\label{ssec:det}
-Pour trouver cette distance à partir de laquelle on commence à sélectionner les
-supernovae analysées, en l'absence de données précises sur les capacités des
-capteurs CCD de chaque échantillon à capter un flux lumineux, l'approche qui a
-été choisie repose sur la comparaison entre l'évolution attendue et l'évolution
-observée. Comme discuté précédemment, on s'attend à avoir un nombre de
-supernovae qui croît proportionnellement à $z³$. En utilisant l'histogramme
-précédent, on a, pour chaque intervalle, le nombre de supernovae observées. En
-définissant une fonction de paramètre $a$ comme $\#\text{SNe Ia} = a\times
-V(z)$, on peut trouver pour chaque milieu d'intervalle le nombre attendu de
-supernovae observées selon cette fonction. On peut alors utiliser une
-statistique poissonienne pour trouver la probabilité d'avoir ce nombre attendu
-sachant qu'on en a effectivement observé le nombre correspondant aux
-intervalles. En n'appliquant ce procédé qu'aux premiers intervalles, avant que
-le nombre de supernovae diminue par les effets de flux, la correspondance est
-bonne, et on peut optimiser le paramètre $a$ en maximisant la probabilité
-mentionnée ci-dessus. À partir d'un moment, la correspondance va devenir de
-moins en moins bonne et l'optimisation de ce paramètre sera mauvaise. La figure
-\ref{zmax_method} est un exemple de ce calcul.
-
-\begin{figure}[htbp!]
-    \centering
-    \subfigure[7 premiers]{\includegraphics[width=.4\linewidth]{Rapport_figures/zmax_method.png}}
-    \subfigure[9 premiers]{\includegraphics[width=.4\linewidth]{Rapport_figures/zmax_method_2.png}}
-    \captionsetup{justification=centering}
-    \caption{Graphique présentant l'évolution de la probabilité poissonienne
-        d'observer un nombre de supernovae correspondant à la fonction
-        $\#\text{SNe Ia} = a\times V(z)$ sachant que l'on en a observé le nombre
-        correspondant à l'intervalle. On a ici un exemple pour on n'a considéré
-        que les 9 premiers intervalles pour la minimisation, en extrapolant ce
-        que cette probabilité deviendrait en prenant plus d'intervalles (en
-        pointillés).}
-    \label{zmax_method}
-\end{figure}
-
-Pour déterminer plus précisément l'intervalle à partir duquel cette probabilité
-s'effondre, cette méthode est appliquée 100 fois, avec un histogramme divisé
-entre 5 et 13 intervalles de manière aléatoire, où pour chaque itération on
-choisit un intervalle maximal aléatoire parmi ces 5 ou 13-là, 4 fois de suite.
-Les courbes d'évolution de la probabilité poissonienne sont enregistrées, puis
-interpolées linéairement pour finalement en prendre la médiane et l'écart-type.
-Le résultat de ce procédé est montré figure \ref{zmax_result}.
-
-\begin{figure}[htbp!]
-    \centering
-    \includegraphics[width=.5\linewidth]{Rapport_figures/zmax_result.png}
-    \captionsetup{justification=centering}
-    \caption{Résultat du procédé de détermination du redshift maximal à partir
-    duquel les effets de sélections ne sont pas anodins.}
-    \label{zmax_result}
-\end{figure}
-
-On a ainsi déterminé les valeurs maximales de redshifts pour lesquelles ont n'a
-pas d'effet de sélection pour les différents échantillons dont on possède les
-données. Tous les raisonnements qui suivent s'appuient uniquement sur ces
-données dites « complètes », et ce procédé ne sera plus mentionné dans la suite.
-
-\begin{itemize}
-    \item Modèle d'évolution ;
-    \item Statistique poissonienne, itérations pour chaque échantillon.
-\end{itemize}
-
-\section{Modèle d'évolution}\label{sec:stretchevol}
 \subsection{Origine du modèle}\label{ssec:stretchevol_ori}
 
-Comme discuté partie \ref{ssec:prog}, le taux de formation stellaire, ci-après
-SFR pour \textit{Stellar Formation Rate}, évolue dans le temps. La collaboration
-SNF, pour \textit{SuperNova Factory}, a notamment effectué des mesures de
-stretch et de taux local spécifique de formation stellaire, LsSFR, c'est-à-dire
-le SFR normalisé par la masse stellaire de la galaxie hôte permettant de classer
-les galaxies par leur activité stellaire relatives (\textit{spécifique}, sSFR)
-dans une distance de $\SI{1}{kpc}$ autour de chaque supernova (\textit{local}).
-Il est alors possible de ranger les SNe Ia en deux catégories, celles issues de
+Comme discuté précédemment, le taux de formation stellaire, ci-après SFR pour
+\textit{Stellar Formation Rate}, évolue dans le temps. La collaboration SNF,
+pour \textit{SuperNova Factory}, a notamment effectué des mesures de stretch et
+de taux local spécifique de formation stellaire, LsSFR, c'est-à-dire le SFR
+normalisé par la masse stellaire de la galaxie hôte permettant de classer les
+galaxies par leur activité stellaire relatives (\textit{spécifique}, sSFR) dans
+une distance de $\SI{1}{kpc}$ autour de chaque supernova (\textit{local}).  Il
+est alors possible de ranger les SNe Ia en deux catégories, celles issues de
 progéniteurs vieux au moment de l'explosion et celles issues de progéniteurs
-jeunes ; en effet le nombre de jeunes progéniteurs est supposé proportionnel au
-SFR qui représente l'activité de formation stellaire, alors que le nombre de
-vieux progéniteurs est proportionnel à la masse stellaire de la galaxie hôte
-(Mannucci et al. 2005, Scannapieco \& Bildsten 2005), et le rapport des deux
-donne, par définition, le sSFR. Le LsSFR est donc un traceur de ce rapport
-localement autour des supernovae. Le LsSFR définissant l'âge d'un progéniteur
-est choisi de telle sorte à ce qu'il y ait autant de supernovae de chaque sorte,
-pour ce redshift-là. Il apparaît alors une corrélation forte entre
-le stretch et le LsSFR, comme le montre la figure \ref{snf_data} : on voit qu'on
-ne peut pas avoir de supernova vieille avec un grand stretch, ou de supernova
-jeune avec un petit stretch.
+jeunes ; en effet la proportion de jeunes progéniteurs (notée $\de\z$) est
+supposée proportionnelle au SFR qui représente l'activité de formation
+stellaire, alors que celle de vieux progéniteurs (notée $\psi\z$) est
+proportionnelle à la masse stellaire de la galaxie hôte (Mannucci et al. 2005,
+Scannapieco \& Bildsten 2005), et le rapport des deux donne, par définition, le
+sSFR. Le LsSFR est donc un traceur de ce rapport localement autour des
+supernovae \cite{rigault_strong_2018}, et on a la relation :
+
+\begin{equation}\label{eq:lssfr}
+    \frac{\de\z}{\psi\z} \equiv LsSFR\z = K\times \LF{1+z}^{\f}
+\end{equation}
+
+qui nous donne, sachant que $\de\z + \psi\z = 1$ :
+
+\begin{equation}\label{eq:depsi}
+    \de\z = \LF{K⁻¹\times \LF{1+z}^{-\f} + 1}⁻¹\\
+    \psi\z = \LF{K\times \LF{1+z}^{+\f} + 1}⁻¹
+\end{equation}
+
+La valeur de LsSFR séparant les deux catégories est choisi de telle sorte à ce
+qu'il y ait autant de supernovae de chaque sorte, pour ce redshift-là. Il
+apparaît alors une corrélation forte entre le stretch et le LsSFR, comme le
+montre la figure \ref{fig:snf_data} : on voit qu'on ne peut pas avoir de
+supernova vieille avec un grand stretch, ou de supernova jeune avec un petit
+stretch.
 
 \begin{figure}[htbp!]
     \centering
-    \subfigure[Données brutes]{\label{snf_data}
+    \subfigure[Données brutes]{\label{fig:snf_data}
         \includegraphics[width=.4\linewidth]{Rapport_figures/BiGaussian_onlydata.pdf}}
-    \subfigure[Premier modèle mis en place]{\label{3G2M2S}
+        \subfigure[Premier modèle mis en place]{\label{fig:3G2M2SSNF}
         \includegraphics[width=.4\linewidth]{Rapport_figures/BiGaussian.pdf}}
     \captionsetup{justification=centering}
     \caption{Stretch des supernovae étudiées par la collaboration SNF en
@@ -546,39 +591,100 @@ supernova d'être issue d'un jeune progéniteur.}
 \end{figure}
 
 On a ainsi essayé de déterminer une loi de distribution du stretch qui puisse
-être différente pour les supernovae issues de progéniteurs jeunes ou vieux. Le
-premier modèle implémenté est composé d'une distribution gaussienne de moyenne
-$\m_1$ et d'écart-type $\s_1$ pour les SNe Ia jeunes, et de la combinaison de
-deux distributions gaussiennes pour les SNe Ia vieilles, dont la première est de
-même moyenne et écart-type que la première (cf. figure \ref{3G2M2S}).
-
-%\begin{figure}[htbp!]
-%    \centering
-%    \includegraphics[width=.5\linewidth]{Rapport_figures/BiGaussian.pdf}
-%    \captionsetup{justification=centering}
-%    \caption{Premier modèle mis en place.}
-%    \label{3G2M2S}
-%\end{figure}
+être différente pour les supernovae issues de progéniteurs jeunes ou vieux,
+puisque cette fraction évolue en fonction de la distance. Le premier modèle
+implémenté est composé d'une distribution gaussienne de moyenne $\m_1$ et
+d'écart-type $\s_1$ pour les SNe Ia jeunes, et de la combinaison de deux
+distributions gaussiennes pour les SNe Ia vieilles, dont la première est de même
+moyenne et écart-type que la première (cf. figure \ref{fig:3G2M2SSNF}). Il est
+donc déterminé par 3 gaussiennes, mais avec 2 $\m$ et 2 $\s$, et se base sur les
+données de SNf ; il sera donc nommé ci-après « 3G2M2SSNF ». METTRE VALEURS DES
+PARAMÈTRES ?
 
 \begin{itemize}
     \item Données \textcolor{orange}{SNF} ;
     \item Définition jeune/vieille d'après \bsc{Rigault et al.} 2018
 \end{itemize}
 
-\subsection{Implémentation aux échantillons}\label{ssec:surveys}
+\subsection{Implémentation aux échantillons}\label{ssec:model}
 La détermination des données complètes discutée partie \ref{ssec:det} nous a
 permis de déterminer le stretch et le redshift moyens des 5 échantillons
-étudiés. 
+étudiés. En extrapolant le modèle déterminé avec les données de SNF sur la gamme
+de redshifts étudiés par les échantillons, on obtient le graphique représenté
+figure \ref{fig:model_snf}.
+
+\begin{figure}[htbp!]
+    \centering
+    \includegraphics[width=.5\linewidth]{Rapport_figures/model_snf.pdf}
+    \captionsetup{justification=centering}
+    \caption{Extrapolation du modèle déterminé à partir des données de SNf sur
+    la gamme de redshifts étudiés par les échantillons étudiés en gris ; moyenne
+des stretchs et des redshifts des échantillons respectivement en ordonnée et en
+abscisse.}
+    \label{fig:model_snf}
+\end{figure}
+
+Le même modèle a été implémenté en utilisant toutes les données de tous les
+échantillons, et se nomme alors « 3G2M2S » ; on trouve alors le graphique
+présenté figure \ref{fig:3G2M2S}.
+
+\begin{figure}[htbp!]
+    \centering
+    \includegraphics[width=.5\linewidth]{Rapport_figures/model_all.pdf}
+    \captionsetup{justification=centering}
+    \caption{Implémentation du modèle 3G2M2S en utilisant toutes les données.
+    La gamme de redshifts a été divisée en 6 intervalles qui contiennent le même
+nombre de données.}
+    \label{fig:3G2M2S}
+\end{figure}
+
 \begin{itemize}
     \item Concordance avec \textcolor{orange}{SNF} seulement
     \item Modèle \textcolor{orange}{SNF} sur toutes les données
 \end{itemize}
 
-\subsection{Modifications et comparaisons}
+\subsection{Modifications et comparaisons}\label{ssec:comp}
+
+C'est la forme du nuage de points de la figure \ref{fig:snf_data} qui nous a
+amenés à ces distributions. Pour savoir s'il est plus pertinent d'avoir, par
+exemple, 3 gaussiennes avec 2 $\m$ mais 1 $\s$, nous avons implémenté
+d'autres modèles dont on retrouve les paramètres dans la table \ref{tab:val}
+
+\begin{table}[htbp!]
+    \centering
+    \caption{Valeurs des paramètres pour 3G2M2SSNF et 3G2M1SSNF}
+    \label{tab:val}
+    \begin{tabularx}{\linewidth}{|Y*{4}{|Y}|}\hline
+         Modèle & $\m_1$ & $\s_1$ & $\m_2$ & $\s_2$ \\\hline\hline
+         3G2M1SSNF & 0 & 1 & 0 & 1 \\\hline
+         3G2M2SSNF & 0 & 1 & 0 & 1 \\\hline
+    \end{tabularx}
+\end{table}
+
+Afin de tester plus efficacement les modèles et les comparer à d'autres travaux
+trouvés dans la littérature, le likelihood, le BIC et l'AICc ont été calculés.
+On obtient la table \ref{tab:comp}.
+
+\begin{table}[htbp!]
+    \centering
+    \caption{Comparaison des modèles.}
+    \label{tab:comp}
+    \begin{tabularx}{\linewidth}{|Y*{6}{|Y}|}\hline
+        Nom modèle & Description & Paramètres libres & $\ln\mathcal{L}$ & BIC &
+        AICc & Proba (from NR 1S) \\\hline
+        1G1M1S & 1 gaussienne & 2 & 1872 & 1885 & 1876 & $2.4\times10^{-12}$
+        \\\hline
+        2G1M2S & Kessler & 3 & 1837 & 1857 & 1843 & $4.1\times10^{-5}$ \\\hline
+    \end{tabularx}
+\end{table}
+
+DECRIRE LES MODELES, DECRIRE BIC, AICc.
+
 \begin{itemize}
     \item Modification du modèle ;
     \item Implémentation d'autres modèles et résultats
 \end{itemize}
+
 
 \section{Conclusion}
 Conclusion.
