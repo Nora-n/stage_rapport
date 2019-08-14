@@ -50,7 +50,7 @@ Cosmologie, supernovae}\vspace{0.5cm}
 Institut de Physique des Deux Infinis\\
 {\textit{Université Lyon 1\\4 rue Enrico Fermi -- bâtiment Dirac\\
 69622 Villeurbanne Cedex}}\\
-\url{https://www.ipnl.in2p3.fr}}\vspace{.5cm}\vfill
+\url{https://www.ip2i.in2p3.fr}}\vspace{.5cm}\vfill
 
 \includegraphics[width=.3\textwidth]{General_figures/IP2I.png}
 \end{center}\vfill \hfill \today
@@ -90,7 +90,7 @@ la détermination des paramètres cosmologiques ? et de combien ?
 
 Dans ce rapport, nous étudions un paramètre intrinsèque à la physique
 de l'explosion du progéniteur en SNe~Ia : l'étallement de la courbe de lumière,
-dit ”stretch” \mr{phillips199?}, et nous nous intéressons à son évolution
+dit "stretch" \cite{phillips_99}, et nous nous intéressons à son évolution
 potentielle en fonction de l'âge de l'univers. Si nous trouvons qu'il évolue,
 alors nous aurons déterminé que la physique des SNe~Ia change en fonction du
 temps comme suggéré par
@@ -245,7 +245,7 @@ La définition de ces paramètres n'est pas anodine : il existe une corrélation
 entre $M_B$ (la magnitude absolue des SNe~Ia dérivée de $m_B$) et le stretch
 $x_1$ et la couleur $c$ (mais pas entre $x_1$ et $c$ par construction). Les
 SNe~Ia à évolution lente (grand stretch) ont une luminosité intrinsèque plus
-grande (relation "brighter-slower") \cite{noauthor_absolute_nodate} et les
+grande (relation "brighter-slower") \cite{phillips_99} et les
 SNe~Ia les plus bleues sont plus lumineuses (relation "brighter-bluer")
 \cite{tripp_two-parameter_1998, riess_first_2006}. Ces relations sont illustrées
 figure \ref{brighter_slower_bluer}.
@@ -402,10 +402,10 @@ supernovae dans l'espace, alors on s'attend à avoir un nombre croissant de
 SNe~Ia avec le redshift ($z$), tel que $N_{\text{SNe~Ia}} \propto z³$. Mais
 lorsque l'on regarde la distribution de SNe~Ia en fonction du redshift, comme
 montré fig~\ref{fig:redshift_miss} pour l'échantillon de SNLS
-\cite{astier_supernova_2006, betoule_improved_2014}, si cette relation semble
-vérifiée jusqu'à une certaine distance (la distribution croît), nous constatons
-qu'à partir d'un certain redshift, le nombre de SNe~Ia observé réduit. Dans ce
-cas, la transition semble s'effectuer autour de $z\approx0.6$.
+\cite{astier_supernova_2006, betoule_improved_2014}, si cette relation semble vérifiée
+jusqu'à une certaine distance (la distribution croît), nous constatons qu'à
+partir d'un certain redshift, le nombre de SNe~Ia observé réduit. Dans ce cas,
+la transition semble s'effectuer autour de $z\approx0.6$.
 
 \begin{figure}[htbp!]
     \centering
@@ -499,7 +499,7 @@ celui attendu si l'échantillon était complet.
 
 \begin{figure}[htbp!]
     \centering
-    \includegraphics[width=.5\linewidth]{Rapport_figures/zmax_result.png}
+    \includegraphics[width=.5\linewidth]{Rapport_figures/zmax_snls.png}
     \captionsetup{justification=centering}
     \caption{Résultat du procédé de détermination du redshift maximal à partir
     duquel les effets de sélections ne sont pas anodins.}
@@ -507,15 +507,17 @@ celui attendu si l'échantillon était complet.
 \end{figure}
 
 \mr{MANQUE, COMME ON OBTIENT $Z_MAX$ MAINTENANT QU'ON A LE PLOT}
+
 \mr{STOPPED HERE}
 
 \subsection{Échantillon utilisé}
 
-On a ainsi déterminé les valeurs maximales de redshifts pour lesquelles on n'a
-pas d'effet de sélection pour les différents échantillons dont on possède les
-données. Tous les raisonnements qui suivent s'appuient uniquement sur ces
-données dites « complètes », et ce procédé ne sera plus mentionné dans la suite.
-Le résultat de ce procédé est représenté figure \ref{fig:surveys_cuts}.
+Une fois déterminé le redshift limite pour chacune des sources de SNe~Ia, nous
+pouvons constituer notre échantillon d'étude. Celui-ci est, par construction,
+représentatif de ce que la nature produit. La table~\ref{tab:sample} [FAIRE LA
+TABLE] récapitule l'origine des SNe~Ia et la fig.~\ref{fig:surveys_cuts} montre
+le stretch en fonction du redshift pour toutes les SNe~Ia considérées (sauf
+SNfactory, voir ci-après) ; celles que nous utiliserons ont un marqueur plein.
 
 \begin{figure}[htbp!]
     \centering
@@ -527,56 +529,30 @@ Le résultat de ce procédé est représenté figure \ref{fig:surveys_cuts}.
     \label{fig:surveys_cuts}
 \end{figure}
 
-\section{Modèle d'évolution}\label{sec:stretchevol}
-Un des problèmes majeurs à la réalisation de ce but est que l'on n'a jamais
-accès aux supernovae avant qu'elles explosent, sous leur forme de
-\textit{progéniteur}, étant donné que les courbes de lumière sont acquises à
-partir du moment de l'explosion. Il est donc impossible d'étudier directement
-les propriétés des progéniteurs (âge, métallicité...). Pourtant, la physique de
-l'explosion à l'origine des SNe Ia dépend de ces propriétés, et on sait que les
-propriétés des \textit{étoiles} d'une manière générale évoluent en fonction du
-temps ; par exemple, à un redshift de $z \approx 1$, il y avait 40 fois plus de
-formation stellaire, et donc de formation de jeunes étoiles. En supposant que
-les propriétés des progéniteurs évoluent également avec le temps, et donc avec
-$z$, on s'attend à avoir une variation de la magnitude absolue avec le redshift,
-ce qui fausserait les mesures du diagramme de Hubble.
+Aux trois échantillons provenant de \cite{scolnic_complete_2018} et dont nous
+avons extrait notre échantillon complet, peut s'ajouter un quatrième
+échantillon, celui de the Nearby Supernova factory (SNfactory)
+\cite{wood-vasey_nearby_2004} et les données proviennent de
+\cite{rigault_strong_2018}.  Contrairement aux autres sondages, SNfactory
+utilise des sondages indépendants pour trouver les SNe~Ia qu'il suit. Ces
+derniers ont un niveau de détection plus profond que les autres et ainsi,
+l'échantillon de SNfactory n'est pas affecté par des effets de sélections
+\cite{rigault_strong_2018}. Nous utiliserons donc l'ensemble des données
+provenant de ce sondage (voir~\ref{tab:sample}). Il en va de même pour les
+quelques SNe~Ia à grand redshift mesurées par le Hubble Space Telescope (HST)
+issues de \cite{scolnic_complete_2018}.
 
-\subsection{Origine du modèle}\label{ssec:stretchevol_ori}
+\mr{Notre échantillon est donc constitué de XXX SNeIa couvrant un domainde de redshift allant de z=XXX à z=XXX [METTRE LES CHIFFRES].}
 
-Comme discuté précédemment, le taux de formation stellaire, ci-après SFR pour
-\textit{Stellar Formation Rate}, évolue dans le temps. La collaboration SNF,
-pour \textit{SuperNova Factory}, a notamment effectué des mesures de stretch et
-de taux local spécifique de formation stellaire, LsSFR, c'est-à-dire le SFR
-normalisé par la masse stellaire de la galaxie hôte permettant de classer les
-galaxies par leur activité stellaire relatives (\textit{spécifique}, sSFR) dans
-une distance de $\SI{1}{kpc}$ autour de chaque supernova (\textit{local}).  Il
-est alors possible de ranger les SNe Ia en deux catégories, celles issues de
-progéniteurs vieux au moment de l'explosion et celles issues de progéniteurs
-jeunes ; en effet la proportion de jeunes progéniteurs (notée $\de\z$) est
-supposée proportionnelle au SFR qui représente l'activité de formation
-stellaire, alors que celle de vieux progéniteurs (notée $\psi\z$) est
-proportionnelle à la masse stellaire de la galaxie hôte (Mannucci et al. 2005,
-Scannapieco \& Bildsten 2005), et le rapport des deux donne, par définition, le
-sSFR. Le LsSFR est donc un traceur de ce rapport localement autour des
-supernovae \cite{rigault_strong_2018}, et on a la relation :
+\section{Évolution intrinsèque des SNe~Ia}\label{sec:stretchevol}
 
-\begin{equation}\label{eq:lssfr}
-    \frac{\de\z}{\psi\z} \equiv LsSFR\z = K\times \LF{1+z}^{\f}
-\end{equation}
-
-qui nous donne, sachant que $\de\z + \psi\z = 1$ :
-
-\begin{equation}\label{eq:depsi}
-    \de\z = \LF{K⁻¹\times \LF{1+z}^{-\f} + 1}⁻¹\\
-    \psi\z = \LF{K\times \LF{1+z}^{+\f} + 1}⁻¹
-\end{equation}
-
-La valeur de LsSFR séparant les deux catégories est choisi de telle sorte à ce
-qu'il y ait autant de supernovae de chaque sorte, pour ce redshift-là. Il
-apparaît alors une corrélation forte entre le stretch et le LsSFR, comme le
-montre la figure \ref{fig:snf_data} : on voit qu'on ne peut pas avoir de
-supernova vieille avec un grand stretch, ou de supernova jeune avec un petit
-stretch.
+En plus des données liées aux courbes de lumières (stretch, couleur, magnitude),
+les données de SNfactory disposent également d'une mesure de la probabilité
+qu'une SNe~Ia soit issue d'un progéniteur jeune ($\lesssim 500 \mathrm{Myr}$) ou
+vieux ($\gtrsim 1 \mathrm{Gyr}$). \cite{rigault_strong_2018} ont montré une
+corrélation forte entre le stretch des SNe~Ia et le \textit{Local specific star
+formation rate} (LsSFR), le traceur de la probabilité qu'une SNe~Ia soit jeune
+ou vieille. Cette corrélation est montrée fig~\ref{fig:snf_data}.
 
 \begin{figure}[htbp!]
     \centering
@@ -590,28 +566,96 @@ stretch.
 supernova d'être issue d'un jeune progéniteur.}
 \end{figure}
 
-On a ainsi essayé de déterminer une loi de distribution du stretch qui puisse
-être différente pour les supernovae issues de progéniteurs jeunes ou vieux,
-puisque cette fraction évolue en fonction de la distance. Le premier modèle
-implémenté est composé d'une distribution gaussienne de moyenne $\m_1$ et
-d'écart-type $\s_1$ pour les SNe Ia jeunes, et de la combinaison de deux
-distributions gaussiennes pour les SNe Ia vieilles, dont la première est de même
-moyenne et écart-type que la première (cf. figure \ref{fig:3G2M2SSNF}). Il est
-donc déterminé par 3 gaussiennes, mais avec 2 $\m$ et 2 $\s$, et se base sur les
-données de SNf ; il sera donc nommé ci-après « 3G2M2SSNF ». METTRE VALEURS DES
-PARAMÈTRES ?
+Le LsSFR est le ratio entre le taux de formation stellaire (SFR, traceur du
+nombre de jeunes étoiles) et la masse (traceur du nombre d'étoiles largement
+dominé par celles de la séquence principale comme le soleil). Or, le taux de
+formation d'étoiles dans l'univers est très dépendant du redshift et est maximum
+vers un redshift de 2, quand l'univers avait approximativement le tiers de son
+âge actuel \cite{madau_cosmic_2014}. Il y avait ainsi $\approx40$ fois plus de
+formation d'étoiles à un redshift de 1 qu'aujourd'hui. La masse n'évolue que
+lentement avec le redshift. Puisque le stretch et le LsSFR sont corrélés, il est
+donc probable que la distribution de stretch des SNe~Ia évolue également avec le
+redshift.
+
+Pour tester cette hypothèse, nous allons dans un premier temps construire un
+modèle décrivant la distribution de stretch en fonction du LsSFR. Ce modèle est
+présenté section~\ref{ssec:stretchevol_ori} où nous présentons également le
+modèle d'évolution du LsSFR en fonction du redshift donné dans
+\cite{rigault_strong_2018}. Dans la section~\ref{ssec:model} nous testerons ce
+modèle sur les données de la littérature. Nous généraliserons ensuite ce modèle
+dans la section~\ref{ssec:comp} et nous comparons les différents modèles, y
+compris des modèles sans évolution avec le redshift, afin de déterminer lequel
+est le plus probable. 
+
+\subsection{Modèle SNf d'évolution du stretch}\label{ssec:stretchevol_ori}
+
+\cite{rigault_strong_2018} appellent $\de\z$ la fraction de jeunes étoiles dans
+un échantillon et $\psi\z$ la fraction de vieilles. Suivant
+\cite{mannucci_supernova_2005, scannapieco_type_2005, sullivan_rates_2006}, ils
+supposent que les fractions de jeunes et vieilles étoiles sont respectivement
+proportionnelles au SFR et à la masse stellaire. Le ratio des deux est donc
+proportionnelle au LsSFR qui évolue comme $(1+z)^{2.8\pm0.2}$ d'après
+\cite{tasca_evolving_2015}. Ainsi \cite{rigault_strong_2018} donne :
+
+\begin{equation}
+\label{eq:lssfr}
+    \frac{\de\z}{\psi\z} \equiv LsSFR\z = K\times \LF{1+z}^{\f}
+\end{equation}
+avec $\f=2.8$. Sachant que $\de\z + \psi\z = 1$, on a:
+\begin{align}
+\label{eq:depsi}
+    \de\z &= \LF{K⁻¹\times \LF{1+z}^{-\f} + 1}⁻¹\ ;\\
+    \psi\z &= \LF{K\times \LF{1+z}^{+\f} + 1}⁻¹
+\end{align}
+
+La valeur de LsSFR séparant les jeunes et vieilles SNe~Ia est choisie telle
+qu'il y ait autant de supernovae de chaque sorte dans l'échantillon de
+SNfactory, à $z\approx0.05$, ce qui impose $K=0.87$.
+
+En s'appuyant sur la forme du nuage de point montré fig.~\ref{fig:snf_data},
+notre modèle de distribution du stretch pour les jeunes et les vieilles SNe~Ia a
+été le suivant :
 
 \begin{itemize}
-    \item Données \textcolor{orange}{SNF} ;
-    \item Définition jeune/vieille d'après \bsc{Rigault et al.} 2018
+    \item \textbf{jeunes} : Une gaussienne de moyenne $m_1$ et d'écart type
+        $\s_1$, soit $\mathcal{N}_1\equiv\mathcal{N}(m_1, s_1)$, 
+    \item \textbf{vieilles} : Une combinaison linéaire entre $\mathcal{N}_1$
+        (même que pour les jeunes) et une seconde gaussienne
+        $\mathcal{N}_2\equiv\mathcal{N}(m_2, s_2)$.
 \end{itemize}
 
+Ainsi, la probabilité d'observer une SNe~Ia "i" jeune avec un stretch $x_1^i$
+d'erreur $dx_1^i$ est:
+
+\begin{equation}
+    p(x_1^i,dx_1^i | m_1, s_1) = \mathcal{N}\left(m_1,
+    \sqrt{s_1{}^2+dx_1^i{}^{2}}\right)(x_1^i)
+\end{equation}
+et pour une SNe~Ia vieille :
+\begin{align}
+    p(x_1^i,dx_1^i | m_{1,2}, s_{1,2}, a) = a &\times \mathcal{N}\left(m_1,
+    \sqrt{s_1{}^2+dx_1^i{}^{2}}\right)(x_1^i) \ + \\ 
+                                    (1-a) &\times \mathcal{N}\left(m_2, \sqrt{
+                                    2{}^2+dx_1^i{}^{2}}\right)(x_1^i),
+\end{align}
+
+où « a » est le facteur d'amplitude relative entre les deux modes
+$\mathcal{N}_1$ et $\mathcal{N}_2$. En ajustant ce modèle sur les données de
+SNfactory (voir fig.~\ref{fig:snf_data}), nous trouvons : $\m_1=BLA\pm BLA$,
+$\s_1=...$ \mr{METTRE LES RESULTATS}
+
+Pour une question de nomenclature pour la suite, nous désignerons ce modèle :
+3G2M2S$_{\mathrm{SNf}}$, car il est composé de 3 gaussiennes (deux vieilles, une
+jeune) mais composé de seulement deux valeurs centrales $\m$ et deux écart-types
+$\s$ et dont tous les paramètres libres ont été ajustés sur les données de SNf.
+
 \subsection{Implémentation aux échantillons}\label{ssec:model}
+
 La détermination des données complètes discutée partie \ref{ssec:det} nous a
-permis de déterminer le stretch et le redshift moyens des 5 échantillons
-étudiés. En extrapolant le modèle déterminé avec les données de SNF sur la gamme
-de redshifts étudiés par les échantillons, on obtient le graphique représenté
-figure \ref{fig:model_snf}.
+permis de déterminer le stretch et le redshift moyens des 5 échantillons étudiés
+(SNf, PS1, SDSS, SNLS, HST). Le stretch moyen de chacun de ces sous-échantillons
+pour les données complètes que nous utilisons est montré fig.
+\ref{fig:model_snf}.
 
 \begin{figure}[htbp!]
     \centering
@@ -624,9 +668,36 @@ abscisse.}
     \label{fig:model_snf}
 \end{figure}
 
-Le même modèle a été implémenté en utilisant toutes les données de tous les
-échantillons, et se nomme alors « 3G2M2S » ; on trouve alors le graphique
-présenté figure \ref{fig:3G2M2S}.
+On remarque que plus le redshift est important, plus le stretch moyen semble
+grand. Si l'on se rappelle que les SNe~Ia à faible stretch sont quasi-uniquement
+des SNe~Ia vieilles (voir fig~\ref{fig:snf_data}) et que la fraction de veilles
+SNe~Ia diminue avec le redshift (pour la gamme de redshift couvert par les
+SNeIa), alors l'évolution visible fig.~\ref{fig:model_snf} est celle à laquelle
+nous nous attendions.
+
+La distribution normalisée de stretch à un redshift donné $\D(x_1 | z)$ est la
+somme pondérée des distributions de stretch des jeunes et des vieilles SNe~Ia
+étant donné leurs fractions relatives à ce redshift. Ainsi, dans le cas du
+modèle $3G2M2S_{\mathrm{SNf}}$ et en supposant l'évolution des fractions de
+jeunes SNe~Ia de \cite{rigault_strong_2018} :
+
+\begin{equation}
+    \D(x_1 | z) = \de\z \times\mathcal{N}_1 + \left(1-\de\z\right)\times \left(a\times\mathcal{N}_1 + (1-a) \mathcal{N}_2\right)
+\end{equation}
+
+Ce modèle est entièrement prédictif et ne dispose d'aucun paramètre libre ; ils
+sont tous fixés par les données de SNf. La fig.~\ref{fig:model_snf} montre que
+notre modèle est particulièrement bien en accord avec les mesures issues des
+données de la littérature.
+
+Alternativement, nous pouvons séparer les SNe~Ia par gammes de redshift plutôt
+que par échantillon d'origine. Cela est montré fig.~\ref{fig:3G2M2S}. Nous
+pouvons également ajuster l'ensemble des paramètres du modèle -- hormis les
+paramètres d'évolution de la fraction de jeunes et de vieilles qui sont fixes --
+non plus sur les données de SNf mais sur l'ensemble des données. Si l'on fait
+ainsi, on trouve : $\mu_1=BLA\pm BLA$, $\s_1=...$ \mr{METTRE LES RESULTATS}. Ce
+modèle, appelé 3G2M2S, est illustré fig.~\ref{fig:3G2M2S} et est similaire avec
+celui ajusté sur les données de SNf.
 
 \begin{figure}[htbp!]
     \centering
@@ -637,11 +708,6 @@ présenté figure \ref{fig:3G2M2S}.
 nombre de données.}
     \label{fig:3G2M2S}
 \end{figure}
-
-\begin{itemize}
-    \item Concordance avec \textcolor{orange}{SNF} seulement
-    \item Modèle \textcolor{orange}{SNF} sur toutes les données
-\end{itemize}
 
 \subsection{Modifications et comparaisons}\label{ssec:comp}
 
@@ -675,6 +741,13 @@ On obtient la table \ref{tab:comp}.
         1G1M1S & 1 gaussienne & 2 & 1872 & 1885 & 1876 & $2.4\times10^{-12}$
         \\\hline
         2G1M2S & Kessler & 3 & 1837 & 1857 & 1843 & $4.1\times10^{-5}$ \\\hline
+        2G2M2S & Howell & 4 & 1818 & 1844 & 1826 & $1.8\times10^{-1}$ \\\hline
+        2G2M2SF & Howell Fixed & 5 & 1823 & 1855 & 1833 & $7.0\times10^{-3}$ \\\hline
+        3G2M1S & NR 1S & 4 & 1815 & 1841 & 1823 & $1.0$ \\\hline
+        3G2M1SF & NR 1S Fixed & 5 & 1823 & 1856 & 1833 & $5.5\times10^{-3}$ \\\hline
+        3G2M2S & NR 2S & 5 & 1815 & 1847 & 1825 & $3.6\times10^{-1}$ \\\hline
+        3G2M2SF & NR 2S Fixed & 6 & 1823 & 1862 & 1835 & $2.5\times10^{-3}$ \\\hline
+        3G3M3S & NR 3S & 7 & 1812 & 1858 & 1826 & $1.6\times10^{-1}$ \\\hline
     \end{tabularx}
 \end{table}
 
@@ -690,8 +763,8 @@ DECRIRE LES MODELES, DECRIRE BIC, AICc.
 Conclusion.
 
 %\bibliographystyle{aa}
-\bibliographystyle{unsrt}
+\bibliographystyle{acm}
 \bibliography{VIDSTIA}
 \addcontentsline{toc}{section}{Bibliographie}
 
-\end{document}
+\end{document}end{document}
